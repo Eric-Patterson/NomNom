@@ -1,0 +1,86 @@
+[
+{"superheroName": "Spider-Man", 
+"alterEgo": "Peter Parker",
+"homeCity": "New York",
+"costume": "blue and red full body suit",
+"superpowers": ["agility", "spidey-sense", "spidey-strength", "web-slinging", "sticky"], 
+"nemesis": "Chameleon"
+},
+
+{"superheroName": "Morbius The Living Vampire",
+"alterEgo": "Micheal Morbius",
+"homeCity": "Greece",
+"costume": "Black Leather",
+"superpowers": ["flight", "genius", "hypnotism", "accelerated-healing", "superhuman-strength", "superhuman-speed"],
+"nemesis": "Blade"
+},
+
+{"superheroName": "Bat-Man", 
+"alterEgo": "Bruce Wayne",
+"homeCity": "Gotham City ",
+"costume": "Black",
+"superpowers": ["No super power just gadgets"], 
+"nemesis": "The Joker"
+},
+{"superheroName": "Wonder Woman", 
+"alterEgo": "Diana Prince",
+"homeCity": "Themyscira",
+"costume": "blue and red skirt",
+"superpowers": ["strength", "speed", "near-invulnerability", "combat", "gauntlets", "golden whip"], 
+"nemesis": "Doctor Cyber"
+},
+{"superheroName": "Thor",  
+"alterEgo": null, 
+"homeCity": "Asgard", 
+"costume": "grey and gold armor", 
+"superpowers": ["a-god", "super-strength", "flying", "thunder"],  
+"nemesis": "loki" 
+},
+
+{
+"superheroName" : "Captain America",
+"alterEgo" : "Steve Rogers",
+"homeCity" : "New York",
+"costume" : "red and blue and white spandex suit",
+"superPowers" : ["agility", "super-strength", "combat prowess", "vibranium shield", "tactical strategist"],
+"nemesis" : "Red Skull"
+},
+{"superheroName": "Sonic", 
+"alterEgo": null,
+"homeCity": "Hardly",
+"costume": null,
+"superpowers": ["speed", "agility", "unlimitted energy"], 
+"nemesis": "Doctor Ivo 'Eggman' Robotnik"
+},
+{"superheroName": "Doctor Manhattan", 
+"alterEgo": "Dr. Jonathan \"Jon\" Osterman",
+"homeCity": "New York",
+"costume": "Glowing blue" ,
+"superpowers": ["Godlike"], 
+"nemesis": "Ozymandias"
+},
+{"superheroName": "Kid Eternity", 
+"alterEgo": "Christopher Freeman",
+"homeCity": null,
+"costume": "White shirt, brown pants",
+"superpowers": ["Summoning of historical or mythological figures"], 
+"nemesis": "Master Man"
+},
+{"superheroName": "Captain Planet", 
+"alterEgo": null,
+"homeCity": "Earth",
+"costume": "green mullet",
+"superpowers": ["elemental manipulation", "super strength", "telepathy", "aviation"], 
+"nemesis": "Smog Hog"
+},
+{"superheroName": "The Tick", 
+"alterEgo": "unknown",
+"homeCity": "The City",
+"costume": "none, he is blue",
+"superpowers": ["superhuman strength", "mass", "drama power"], 
+"nemesis": "The Terror"
+}
+]
+
+
+

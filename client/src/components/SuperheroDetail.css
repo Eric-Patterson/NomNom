@@ -1,0 +1,15 @@
+.detail-fields {
+    display: grid;
+    grid-template-columns: auto auto;
+}
+
+.field-title {
+    font-weight: 700;
+    text-align: right;
+    margin: 0em 1em;
+}
+
+.field-value {
+    text-align: left;
+    margin: 0em;
+}
