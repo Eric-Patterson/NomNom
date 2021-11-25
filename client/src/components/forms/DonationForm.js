@@ -1,29 +1,32 @@
 import React from "react";
 import { useState } from "react";
-
+import DateTimePicker from 'react-datetime-picker';
 
 function DonationForm() {
     //set begining state for all variables
-  const [foodType, setFoodType] = useState("");
-  const [numberOfServings, setNumberOfServings] = useState("");
-  const [pickUp, setPickUp] = useState(false);
-  const [deliver, setDeliver] = useState(false);
+  const [foodType, setFoodType] = useState("vegetarian");
+  const [numberOfServings, setNumberOfServings] = useState("0");
+  const [radio, setRadio] = useState("");
+  // const [deliver, setDeliver] = useState(false);
   const [cookingInstructions, setCookingInstructions] = useState("");
   const [disclaimer, setDisclaimer] = useState("");
   const [agree, setAgree] = useState(false);
   const [disagree, setDisagree] = useState(false);
- 
+  const [value, onChange] = useState(new Date());
+  const [showResults, setShowResults] = useState(false);
+  const onClick = () => setShowResults(true)
   
    function onInputUpdate(event, setter) {
     let newValue = event.target.value
     setter(newValue)
 }
 
+
+//for database//
   async function donationSubmitFunction() {
     const donationInfo = {
         foodType,
         numberOfServings,
-        pickUp, deliver,
         cookingInstructions,
         disclaimer,
         agree, disagree
@@ -38,31 +41,55 @@ function DonationForm() {
       // })
   }
 
+// const handleChange = () => {
+//   console.log ("the checkbox was toggled")
+// }
+
+const Results = () => {
+  <div>
+    bla bla blaajjjjhgfdfghjkjhgfdfghjhgfdfghjhgfghjjhgfdfghjhgfdrtyuytrertyuiuydsdfgvcxcvbnbvcxcvbnbvsdfghgfdertyuytrtyhvcdrtyhbvcdfghjnbv
+  </div>
+}
 
   return (
-    <div>
+    <form method="post" action="/login">
         <h2>Donation Form</h2>
         <div className="detail-fields">
+            {/* <label className="field-title">Food Type</label>
+            <input value={foodType} onChange={(event) => onInputUpdate(event, setFoodType) } /> */}
             <label className="field-title">Food Type</label>
-            <input value={foodType} onChange={(event) => onInputUpdate(event, setFoodType) } />
+            <select value={foodType} onChange = {(e)=> {setFoodType(e.target.value)}}>
+              <option value= "vegetarian"> Vegetarian </option>
+              <option value= "glutenFree"> Gluten-free </option>
+              <option value= "dairyFree"> Dairy-free </option>
+              <option value= "nonPerishable"> Non-Perishable </option>
+              <option value= "meals"> Meals </option>
+            </select>
             <label className="field-title">Number Of Servings</label>
-            <input value={numberOfServings} onChange={(event) => onInputUpdate(event, setNumberOfServings) } />
+            <input type="number" min="0" value={numberOfServings} onChange={(event) => onInputUpdate(event, setNumberOfServings) } />
             <label className="field-title">Pick Up</label>
-            <input value={pickUp} onChange={(event) => onInputUpdate(event, setPickUp) } />
+            <input type="radio" value="pickup" checked= {radio === "pickup"} onChange = {(e) => {setRadio(e.target.value)}} />
             <label className="field-title">Deliver</label>
-            <input value={deliver} onChange={(event) => onInputUpdate(event, setDeliver) } />
+            <input type="radio" value="deliver" checked= {radio === "deliver"} onChange = {(e) => {setRadio(e.target.value)}} />
+            {/* <label className="field-title">Deliver</label>
+            <input type="radio" value={deliver} checked= {radio === "deliver"} onChange={(event) => onInputUpdate(event, setDeliver) } /> */}
             <label className="field-title">Cooking Instructions</label>
-            <input value={cookingInstructions} onChange={(event) => onInputUpdate(event, setCookingInstructions) }/>
+            <input type="text" value={cookingInstructions} onChange={(event) => onInputUpdate(event, setCookingInstructions) }/>
             <label className="field-title">Disclaimer</label>
-            <input value={disclaimer} onChange={(event) => onInputUpdate(event, setDisclaimer) }/>
+            <input type="text" value={disclaimer} onChange={(event) => onInputUpdate(event, setDisclaimer) }/>
             <label className="field-title">Agree</label>
-            <input value={agree} onChange={(event) => onInputUpdate(event, setAgree) }/>
-            <label className="field-title">Disagree</label>
-            <input value={disagree} onChange={(event) => onInputUpdate(event, setDisagree) }/>
+            <input type= "checkbox" value={agree} required onClick={onClick}/>
+            {/* <input type= "checkbox" value={agree} required onChange={handleChange}/> */}
+            {/* <div>{showResults ? <Results/> : null}</div> */}
+            <label className="field-title">Pick Time and Date</label>
+            <DateTimePicker
+        onChange={onChange}
+        value={value}
+      />
         </div>
         <button onClick={donationSubmitFunction} >Submit</button>
 
-    </div>
+    </form>
   );
 }
 
