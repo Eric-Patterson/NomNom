@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import SuperheroDetail from './components/SuperheroDetail';
 import SuperheroList from './components/SuperheroList';
+import DonationForm from './components/forms/DonationForm';
 
 import './App.css';
 
@@ -11,6 +12,7 @@ function App() {
 
   return (
     <div className="App">
+      <DonationForm/>
       {/* { selectedSuperheroId ? 
           <div>
             <button onClick={() => setSelectedSuperheroId(undefined)}>Go Back</button>
