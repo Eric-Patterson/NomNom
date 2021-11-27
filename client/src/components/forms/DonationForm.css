@@ -1,0 +1,14 @@
+.center input {
+  display: block;
+  font-size: 11px;
+  padding: 2px 2px;
+  /* border: solid 1px #aacfe4; */
+  /* width: 70px; */
+  /* margin: 2px 0 20px 10px; */
+}
+.center {
+  border: 1px solid red;
+  width: 50%;
+  margin: auto;
+  height: 500px;
+}
