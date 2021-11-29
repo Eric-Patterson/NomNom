@@ -1,10 +1,12 @@
 const express = require('express')
-const superheroRoutes = require('./routes/superheroRoutes')
+const donationRoutes = require('./routes/donationRoutes')
 
 const app = express()
 const port = 5000
 
-app.use('/api',superheroRoutes)
+app.use(express.json())
+
+app.use('/api',donationRoutes)
 app.use('/', express.static('../client/build'))
 
 app.listen(port, () => {

@@ -1,0 +1,133 @@
+
+[
+    {"companyName": "Lambda Supermarket", 
+    "location": "1423 Center ST N Calgary AB T2E2R8",
+    "area/neighbourhood": "Crescent Height",
+    "accountNumber": "2557",
+    "phoneNumber": "4032301916", 
+    "status": "approved"
+    },
+    
+    {"companyName": "Kay's Food Market", 
+        "location": "935 6th Ave SW, Calgary AB T2P 0V7",
+        "area/neighbourhood": "Westmont",
+        "accountNumber": "2777",
+        "phoneNumber": "4032615655", 
+        "status": "approved"
+        },
+    
+    {"companyName": "Sunnyside Natural Market", 
+        "location": "338 10 St Nw, Calgary AB T2N 1V8",
+        "area/neighbourhood": "Mount Pleasant",
+        "accountNumber": "2447",
+        "phoneNumber": "4032707477", 
+        "status": "approved"
+        },
+    
+    
+    {"companyName": "Bridgeland Market", 
+        "location": "1104 1 Ave NE, Calgary AB T2E 0C8",
+        "area/neighbourhood": "Pembrooks Meadows",
+        "accountNumber": "2888",
+        "phoneNumber": "4032692381", 
+        "status": "approved"
+        },
+    
+    
+    {"companyName": "Real Canadian Superstore", 
+        "location": "20 Heritage Meadows Way SE #100, Calgary AB T2H 0B5",
+        "area/neighbourhood": "Lakeview Village",
+        "accountNumber": "2487",
+        "phoneNumber": "4036926220", 
+        "status": "approved"
+        }
+    ]
+
+
+
+// [
+// {"superheroName": "Spider-Man", 
+// "alterEgo": "Peter Parker",
+// "homeCity": "New York",
+// "costume": "blue and red full body suit",
+// "superpowers": ["agility", "spidey-sense", "spidey-strength", "web-slinging", "sticky"], 
+// "nemesis": "Chameleon"
+// },
+
+// {"superheroName": "Morbius The Living Vampire",
+// "alterEgo": "Micheal Morbius",
+// "homeCity": "Greece",
+// "costume": "Black Leather",
+// "superpowers": ["flight", "genius", "hypnotism", "accelerated-healing", "superhuman-strength", "superhuman-speed"],
+// "nemesis": "Blade"
+// },
+
+// {"superheroName": "Bat-Man", 
+// "alterEgo": "Bruce Wayne",
+// "homeCity": "Gotham City ",
+// "costume": "Black",
+// "superpowers": ["No super power just gadgets"], 
+// "nemesis": "The Joker"
+// },
+// {"superheroName": "Wonder Woman", 
+// "alterEgo": "Diana Prince",
+// "homeCity": "Themyscira",
+// "costume": "blue and red skirt",
+// "superpowers": ["strength", "speed", "near-invulnerability", "combat", "gauntlets", "golden whip"], 
+// "nemesis": "Doctor Cyber"
+// },
+// {"superheroName": "Thor",  
+// "alterEgo": null, 
+// "homeCity": "Asgard", 
+// "costume": "grey and gold armor", 
+// "superpowers": ["a-god", "super-strength", "flying", "thunder"],  
+// "nemesis": "loki" 
+// },
+
+// {
+// "superheroName" : "Captain America",
+// "alterEgo" : "Steve Rogers",
+// "homeCity" : "New York",
+// "costume" : "red and blue and white spandex suit",
+// "superPowers" : ["agility", "super-strength", "combat prowess", "vibranium shield", "tactical strategist"],
+// "nemesis" : "Red Skull"
+// },
+// {"superheroName": "Sonic", 
+// "alterEgo": null,
+// "homeCity": "Hardly",
+// "costume": null,
+// "superpowers": ["speed", "agility", "unlimitted energy"], 
+// "nemesis": "Doctor Ivo 'Eggman' Robotnik"
+// },
+// {"superheroName": "Doctor Manhattan", 
+// "alterEgo": "Dr. Jonathan \"Jon\" Osterman",
+// "homeCity": "New York",
+// "costume": "Glowing blue" ,
+// "superpowers": ["Godlike"], 
+// "nemesis": "Ozymandias"
+// },
+// {"superheroName": "Kid Eternity", 
+// "alterEgo": "Christopher Freeman",
+// "homeCity": null,
+// "costume": "White shirt, brown pants",
+// "superpowers": ["Summoning of historical or mythological figures"], 
+// "nemesis": "Master Man"
+// },
+// {"superheroName": "Captain Planet", 
+// "alterEgo": null,
+// "homeCity": "Earth",
+// "costume": "green mullet",
+// "superpowers": ["elemental manipulation", "super strength", "telepathy", "aviation"], 
+// "nemesis": "Smog Hog"
+// },
+// {"superheroName": "The Tick", 
+// "alterEgo": "unknown",
+// "homeCity": "The City",
+// "costume": "none, he is blue",
+// "superpowers": ["superhuman strength", "mass", "drama power"], 
+// "nemesis": "The Terror"
+// }
+// ]
+
+
+

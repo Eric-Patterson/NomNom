@@ -1,9 +1,9 @@
-let superheroList = require('./superheroList.json')
-let superheroModel = require('./superhero')
+let donationList = require('./donationList.json')
+let donationModel = require('./donation')
 
-superheroList.forEach(async (hero) => {
-    console.log('Creating superhero:', hero.superheroName)
-    let createdId = await superheroModel.createSuperhero(hero)
-    console.log('... created with id', createdId)
+donationList.forEach(async (hero) => {
+    // console.log('Creating superhero:', hero.superheroName)
+    let createdId = await donationModel.createDonation(donate)
+    // console.log('... created with id', createdId)
 })
 
