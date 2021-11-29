@@ -1,19 +1,10 @@
 [
-// {"superheroName": "Spider-Man", 
-// "alterEgo": "Peter Parker",
-// "homeCity": "New York",
-// "costume": "blue and red full body suit",
-// "superpowers": ["agility", "spidey-sense", "spidey-strength", "web-slinging", "sticky"], 
-// "nemesis": "Chameleon"
-// },
-
 {
 "foodType": "meal", 
 "numberOfServings": 2,
-"cookingInstructions": null,
+"cookingInstructions": "",
 "ingredients": ["rice noodles", "onions", "seaweed", "almonds", "oil"],
 "disclaimer": "may contain nuts",
-"dateAndTime": "",
 "termsAndConditions": true
 },
 
@@ -22,8 +13,7 @@
 "numberOfServings": 4,
 "cookingInstructions": "open packet and pour into pan, stirfry until cooked",
 "ingredients": ["brocolli", "onions", "garlic", "oil"],
-"disclaimer": null,
-"dateAndTime": "",
+"disclaimer": "",
 "termsAndConditions": true
 }
 ]

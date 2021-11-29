@@ -1,6 +1,9 @@
 import React from "react";
 import { useState } from "react";
-import DateTimePicker from "react-datetime-picker";
+
+// reuse later one
+// import DateTimePicker from "react-datetime-picker";
+
 import "./DonationForm.css";
 
 function DonationForm() {
@@ -49,6 +52,7 @@ function DonationForm() {
       agree,
       disagree,
     };
+
     // console.log('donation submission data', donationInfo)
     // await fetch('/api/donationForm', {
     //     method: "POST",
@@ -59,19 +63,13 @@ function DonationForm() {
     // })
   }
 
-  // const handleChange = () => {
-  //   console.log ("the checkbox was toggled")
-  // }
-
   return (
     <div className="center">
       <form method="post" action="/login">
         <h1>Donation Form</h1>
-        <br/>
+        <br />
         <div className="detail-fields">
-          {/* <label className="field-title">Food Type</label>
-            <input value={foodType} onChange={(event) => onInputUpdate(event, setFoodType) } /> */}
-        <br/>
+          <br />
           <label className="field-title">Food Type</label>
           <select
             value={foodType}
@@ -92,8 +90,8 @@ function DonationForm() {
             value={numberOfServings}
             onChange={(event) => onInputUpdate(event, setNumberOfServings)}
           />
-          <br/>
-        <p>Delivery Option</p>
+          <br />
+          <p>Delivery Option</p>
           <label className="field-title">Pick Up</label>
           <input
             type="radio"
@@ -112,8 +110,6 @@ function DonationForm() {
               setRadio(e.target.value);
             }}
           />
-          {/* <label className="field-title">Deliver</label>
-            <input type="radio" value={deliver} checked= {radio === "deliver"} onChange={(event) => onInputUpdate(event, setDeliver) } /> */}
           <label className="field-title">Cooking Instructions</label>
           <input
             type="text"
@@ -141,9 +137,10 @@ function DonationForm() {
           </label>
 
           <label className="field-title">Pick Time and Date</label>
-          <DateTimePicker onChange={onChange} value={value} />
+
+          {/* reuse later on */}
+          {/* <DateTimePicker onChange={onChange} value={value} /> */}
         </div>
-        {/* <button onClick={donationSubmitFunction}>Submit</button> */}
         <button disabled={!agree} className="btn" onClick={submitHandler}>
           Submit
         </button>

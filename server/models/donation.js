@@ -1,33 +1,30 @@
-const mongoose = require('./mongooseDb')
+const mongoose = require("./mongooseDb");
 
-const donationInventory = mongoose.model('donationInventory', 
-    {
-        "foodType": String, 
-        "numberOfServings": Number,
-        "cookingInstructions": String,
-        "ingredients": [String],
-        "disclaimer": String,
-        "dateAndTime": String,
-        "termsAndConditions": Boolean
-    }
-)
+const DonationSchema = mongoose.model("DonationInventory", {
+  foodType: String,
+  numberOfServings: Number,
+  cookingInstructions: String,
+  ingredients: [String],
+  disclaimer: String,
+  termsAndConditions: Boolean,
+});
 
 async function createDonation(donationData) {
-    let newDonation = new donationInventory(donationData)
-    let createdDonation = await newDonation.save()
-    return createdDonation.id
+  let newDonation = new DonationSchema(donationData);
+  let createdDonation = await newDonation.save();
+  return createdDonation.id;
 }
 
 async function listDonations() {
-    return donationInventory.find({})
+  return DonationSchema.find({});
 }
 
 async function findById(id) {
-    return donationInventory.findById(id)
+  return DonationSchema.findById(id);
 }
 
 module.exports = {
-    createDonation,
-    listDonations,
-    findById
-}
+  createDonation,
+  listDonations,
+  findById,
+};
