@@ -1,6 +1,7 @@
 import React from "react";
 import Navbar from "./components/Navbar/Navbar";
 import DonationForm from "./components/forms/DonationForm";
+import PickupForm from "./components/forms/PickupForm";
 
 import "./App.css";
 
@@ -9,6 +10,7 @@ function App() {
     <div className="App">
       <Navbar />
       <DonationForm />
+      <PickupForm />
     </div>
   );
 }
