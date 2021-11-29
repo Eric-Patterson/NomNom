@@ -66,10 +66,12 @@ function DonationForm() {
   return (
     <div className="center">
       <form method="post" action="/login">
-        <h2>Donation Form</h2>
+        <h1>Donation Form</h1>
+        <br/>
         <div className="detail-fields">
           {/* <label className="field-title">Food Type</label>
             <input value={foodType} onChange={(event) => onInputUpdate(event, setFoodType) } /> */}
+        <br/>
           <label className="field-title">Food Type</label>
           <select
             value={foodType}
@@ -90,6 +92,8 @@ function DonationForm() {
             value={numberOfServings}
             onChange={(event) => onInputUpdate(event, setNumberOfServings)}
           />
+          <br/>
+        <p>Delivery Option</p>
           <label className="field-title">Pick Up</label>
           <input
             type="radio"
