@@ -1,8 +1,8 @@
 import { useEffect, useState } from 'react'
 
-import './DonationDetails.css'
+import './SuperheroDetail.css'
 
-const DonationDetails = ({superheroId}) => {
+const SuperheroDetail = ({superheroId}) => {
 
     const [hero, setHero] = useState({ superpowers: [] })
   
@@ -40,5 +40,5 @@ const DonationDetails = ({superheroId}) => {
     )
   }
 
-  export default DonationDetails
+  export default SuperheroDetail
   

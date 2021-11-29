@@ -7,13 +7,13 @@ const donationInventory = mongoose.model('donationInventory',
         "cookingInstructions": String,
         "ingredients": [String],
         "disclaimer": String,
-        "dateAndTime": ,
+        "dateAndTime": String,
         "termsAndConditions": Boolean
     }
 )
 
-async function createDonation(donaitonData) {
-    let newDonation = new Donation(donationData)
+async function createDonation(donationData) {
+    let newDonation = new donationInventory(donationData)
     let createdDonation = await newDonation.save()
     return createdDonation.id
 }
