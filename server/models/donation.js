@@ -17,6 +17,7 @@ async function createDonation(donationData) {
 
 async function listDonations() {
   return DonationSchema.find({});
+  console.log (listDonations)
 }
 
 async function findById(id) {

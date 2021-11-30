@@ -4,6 +4,7 @@ const router = express.Router();
 const donationModel = require("../models/donation");
 
 router.get("/donation", async (req, res) => {
+  console.log ("reached this endpoint")
   let donationList = await donationModel.listDonations();
   res.send(donationList);
 });

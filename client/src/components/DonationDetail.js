@@ -4,12 +4,13 @@ import './DonationDetail.css'
 
 const DonationDetail = ({donationId}) => {
 
-    const [donate, setDonate] = useState({ ingredients: [] })
+    const [donate, setDonate] = useState()
   
     useEffect(() => {
       const fetchDonation = async () => {
         let fetchResult = await fetch('/api/donation/'+ donationId)
         let fetchedDonate = await fetchResult.json()
+        console.log (fetchedDonate)
         setDonate(fetchedDonate)
       }
       fetchDonation()
@@ -41,6 +42,7 @@ const DonationDetail = ({donationId}) => {
       </div>
     )
   }
+
 
   export default DonationDetail
   
