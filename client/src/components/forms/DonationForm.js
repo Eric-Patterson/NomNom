@@ -141,6 +141,7 @@ function DonationForm(onSave) {
           Submit
         </button>
 
+      {/* half working button */}
         <button 
         className="btn"
         onClick={() => {
