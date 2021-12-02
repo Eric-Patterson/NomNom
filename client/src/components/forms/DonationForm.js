@@ -140,6 +140,18 @@ function DonationForm(onSave) {
         <button disabled={!agree} className="btn" onClick={submitHandler}>
           Submit
         </button>
+
+        <button 
+        className="btn"
+        onClick={() => {
+          const confirmBox = window.confirm(
+            "You are about to submit your donation, would you like to proceed?"
+          )
+          if (confirmBox === true) {
+          }
+        }}> Confirm Donation
+        </button>
+
       </form>
     </div>
   );
