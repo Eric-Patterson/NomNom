@@ -1,5 +1,4 @@
 import { useEffect, useState } from 'react'
-
 import './DonationDetail.css'
 
 const DonationDetail = ({donationId}) => {

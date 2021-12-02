@@ -15,10 +15,8 @@ const DonationList = ({setSelectedDonationId}) => {
   const [donations, setDonations] = useState([])
   useEffect(() => {
     async function fetchData() {
-      console.log('Fetching superhero data!')
       let fetchResult = await fetch("/api/donation")
       let donationList = await fetchResult.json()
-      console.log (donationList)
       setDonations(donationList)
     }
     fetchData()

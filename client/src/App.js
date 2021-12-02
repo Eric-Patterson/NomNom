@@ -13,7 +13,7 @@ function App() {
     <div className="App">
       <Navbar />
       <DonationForm />
-      <PickupForm />
+      {/* <PickupForm /> */}
       <DonationList />
     </div>
   );

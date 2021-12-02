@@ -1,12 +1,12 @@
 import React from "react";
 import { useState } from "react";
-
+import "./DonationForm.css";
 // reuse later one
 // import DateTimePicker from "react-datetime-picker";
 
-import "./DonationForm.css";
 
-function DonationForm() {
+
+function DonationForm(onSave) {
   //set begining state for all variables
   const [foodType, setFoodType] = useState("vegetarian");
   const [numberOfServings, setNumberOfServings] = useState("0");
@@ -28,13 +28,8 @@ function DonationForm() {
     // Don't miss the exclamation mark
   };
   // When the button is clicked
-  const btnHandler = () => {
-    // alert("The buttion is clickable!");
-  };
-
   function submitHandler() {
-    btnHandler();
-    donationSubmitFunction();
+    donationSubmitFunction()
   }
   function onInputUpdate(event, setter) {
     let newValue = event.target.value;
@@ -50,17 +45,16 @@ function DonationForm() {
       disclaimer,
       ingredients,
       agree,
-      disagree,
     };
 
-    // console.log('donation submission data', donationInfo)
-    // await fetch('/api/donationForm', {
-    //     method: "POST",
-    //     headers: {
-    //         'Content-Type': 'application/json'
-    //     },
-    //     body: JSON.stringify(donationInfo)
-    // })
+    console.log('donation submission data', donationInfo)
+    await fetch('/api/donationForm', {
+        method: "POST",
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(donationInfo)
+    })
   }
 
   return (
@@ -68,9 +62,9 @@ function DonationForm() {
       <form method="post" action="/login">
         <h1>Donation Form</h1>
         <br />
-        <div className="detail-fields">
+
           <br />
-          <label className="field-title">Food Type</label>
+          <label >Food Type</label>
           <select
             value={foodType}
             onChange={(e) => {
@@ -82,17 +76,18 @@ function DonationForm() {
             <option value="dairyFree"> Dairy-free </option>
             <option value="nonPerishable"> Non-Perishable </option>
             <option value="meals"> Meals </option>
-          </select>
-          <label className="field-title">Number Of Servings</label>
+          </select> <br/>
+          <label >Number Of Servings</label>
           <input
             type="number"
             min="0"
+            max="4"
             value={numberOfServings}
             onChange={(event) => onInputUpdate(event, setNumberOfServings)}
           />
           <br />
           <p>Delivery Option</p>
-          <label className="field-title">Pick Up</label>
+          <label >Pick Up</label>
           <input
             type="radio"
             value="pickup"
@@ -101,7 +96,7 @@ function DonationForm() {
               setRadio(e.target.value);
             }}
           />
-          <label className="field-title">Deliver</label>
+          <label >Deliver</label>
           <input
             type="radio"
             value="deliver"
@@ -110,37 +105,38 @@ function DonationForm() {
               setRadio(e.target.value);
             }}
           />
-          <label className="field-title">Cooking Instructions</label>
+          <label >Cooking Instructions</label>
           <input
             type="text"
             value={cookingInstructions}
             onChange={(event) => onInputUpdate(event, setCookingInstructions)}
           />
-          <label className="field-title">Disclaimer</label>
+          <label >Disclaimer</label>
           <input
             type="text"
             value={disclaimer}
             onChange={(event) => onInputUpdate(event, setDisclaimer)}
           />
-          <label className="field-title">Ingredients</label>
+          <label >Ingredients</label>
           <input
             type="text"
-            value={disclaimer}
+            value={ingredients}
             onChange={(event) => onInputUpdate(event, setIngredients)}
-          />
-          <label className="field-title">Agree</label>
+          /><br/>
 
-          <input type="checkbox" id="agree" onChange={checkboxHandler} />
+          <label >Pick Time and Date</label><br/><br/>
+
           <label htmlFor="agree">
             {" "}
             I agree to <b>terms and conditions</b>
-          </label>
-
-          <label className="field-title">Pick Time and Date</label>
+          </label><br/>
+          <label >Agree</label><br/>
+          <input type="checkbox" id="agree" onChange={checkboxHandler} />
 
           {/* reuse later on */}
           {/* <DateTimePicker onChange={onChange} value={value} /> */}
-        </div>
+
+
         <button disabled={!agree} className="btn" onClick={submitHandler}>
           Submit
         </button>
