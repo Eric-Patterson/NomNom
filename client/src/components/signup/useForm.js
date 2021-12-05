@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 
-const useForm = () => {
+const useForm = (callback, validate) => {
     const [values, setValues] = useState({ //values to set initial state value and setValues to update this state
         username: "",
         email: "",
@@ -8,6 +8,7 @@ const useForm = () => {
         password2: ""
     })
     const [errors, setErrors] = useState({})
+    const [isSubmitting, setIsSubmitting] = useState(false)
 
 
     const handleChange = e => {
@@ -17,12 +18,24 @@ const useForm = () => {
             [name]: value
         })
     }
-// to prevent page from refreshing:
+    // to prevent page from refreshing:
     const handleSubmit = e => {
         e.preventDefault()
+
+        setErrors(validate(values))
+        setIsSubmitting(true)
     }
 
-    return { handleChange, values, handleSubmit }
+    // to prevent submitting empty form:
+    useEffect(() => {
+        if (Object.keys(errors).length === 0 && isSubmitting) {
+            callback()
+        }
+    },
+    [errors] //only triggers when it updates errors
+    )
+
+    return { handleChange, values, handleSubmit, errors }
 }
 
 export default useForm //we exporting handleChange function to FormSignup.js
