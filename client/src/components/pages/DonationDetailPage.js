@@ -1,6 +1,6 @@
 import { useParams } from "react-router-dom";
 
-import DonationDetail from "../components/DonationDetail";
+import DonationDetail from "../DonationDetail";
 
 const DonationDetailPage = () => {
   let params = useParams();
@@ -8,6 +8,7 @@ const DonationDetailPage = () => {
   return (
     <div>
       <DonationDetail id={params.id} />
+
     </div>
   );
 };
