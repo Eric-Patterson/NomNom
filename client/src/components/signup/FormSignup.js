@@ -97,3 +97,4 @@ const FormSignup = ({ submitForm }) => {
 };
 
 export default FormSignup;
+

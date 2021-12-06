@@ -2,16 +2,19 @@ import React from "react";
 import { Routes, Route, Link } from "react-router-dom";
 import DonationDetailPage from "./components/pages/DonationDetailPage";
 import Home from "./components/pages/Home";
+
 import CreateDonationPage from "./components/pages/CreateDonationPage";
 import PickupFormPage from "./components/pages/PickupFormPage";
 import Navbar from "./components/Navbar/Navbar";
 import Form from "./components/signup/Form";
+
 
 import "./App.css";
 
 function App() {
   return (
     <div className="App">
+
       {/* <Form /> */}
       <Navbar />
       <nav>
@@ -43,6 +46,7 @@ function App() {
       <DonationForm />
       <PickupForm />
       <DonationList /> */}
+
     </div>
   );
 }
