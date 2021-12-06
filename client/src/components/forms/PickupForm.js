@@ -1,100 +1,144 @@
 import React from "react";
-import { useState } from "react";
-import DateTimePicker from 'react-datetime-picker';
+import { useState, useEffect } from "react";
+import "./DonationForm.css";
 
-
-function PickupForm() {
-    //set begining state for all variables
+function PickupForm({ existingValues, onSave }) {
+  const [enteredDate, setEnteredDate] = useState("");
   const [foodType, setFoodType] = useState("vegetarian");
   const [numberOfServings, setNumberOfServings] = useState("0");
-  //const [radio, setRadio] = useState("");
-  // const [deliver, setDeliver] = useState(false);
-//  const [cookingInstructions, setCookingInstructions] = useState("");
-//  const [disclaimer, setDisclaimer] = useState("");
-//  const [agree, setAgree] = useState(false);
-//  const [disagree, setDisagree] = useState(false);
- const [value, onChange] = useState(new Date());
-//  const [showResults, setShowResults] = useState(false);
-  //const onClick = () => setShowResults(true)
-  
-   function onInputUpdate(event, setter) {
-    let newValue = event.target.value
-    setter(newValue)
-}
+  const [radio, setRadio] = useState("");
+  const [cookingInstructions, setCookingInstructions] = useState("");
+  const [disclaimer, setDisclaimer] = useState("");
+  const [agree, setAgree] = useState(false);
+  const [ingredients, setIngredients] = useState("");
 
+  useEffect(() => {
+    if (existingValues) {
+      // onChange(existingValues.value);
+      setEnteredDate(existingValues.enteredDate);
+      setFoodType(existingValues.foodType);
+      setNumberOfServings(existingValues.numberOfServings);
+      setRadio(existingValues.radio);
+      setCookingInstructions(existingValues.cookingInstructions);
+      setDisclaimer(existingValues.disclaimer);
+      setAgree(existingValues.agree);
+      setIngredients(existingValues.ingredients);
+    }
+  }, [existingValues]);
 
-//for database//
-  async function pickupSubmitFunction() {
-    const donationInfo = {
-        foodType,
-        numberOfServings,
-        //cookingInstructions,
-       // disclaimer,
-        //agree, disagree
-      }
-      // console.log('donation submission data', donationInfo)
-      // await fetch('/api/donationForm', {
-      //     method: "POST",
-      //     headers: {
-      //         'Content-Type': 'application/json'
-      //     },
-      //     body: JSON.stringify(donationInfo)
-      // })
+  const checkboxHandler = () => {
+    // if agree === true, it will be set to false
+    // if agree === false, it will be set to true
+    setAgree(!agree);
+  };
+
+  const dateChangeHandler = (e) => {
+    setEnteredDate(e.target.value);
+  };
+
+  async function postData() {
+    let donationInfo = {
+      date: new Date(enteredDate),
+      // value,
+      foodType,
+      numberOfServings,
+      cookingInstructions,
+      disclaimer,
+      ingredients,
+      agree,
+      radio,
+    };
+    console.log("Saving donation", donationInfo);
+    await onSave(donationInfo);
   }
 
-// const handleChange = () => {
-//   console.log ("the checkbox was toggled")
-// }
-
-const Results = () => {
-  <div>
-    bla bla blaajjjjhgfdfghjkjhgfdfghjhgfdfghjhgfghjjhgfdfghjhgfdrtyuytrertyuiuydsdfgvcxcvbnbvcxcvbnbvsdfghgfdertyuytrtyhvcdrtyhbvcdfghjnbv
-  </div>
-}
+  function onInputUpdate(event, setter) {
+    let newValue = event.target.value;
+    setter(newValue);
+  }
 
   return (
-    <form method="post" action="/login">
-        <h2>Pickup Form</h2>
-        <div className="detail-fields">
-            {/* <label className="field-title">Food Type</label>
-            <input value={foodType} onChange={(event) => onInputUpdate(event, setFoodType) } /> */}
-            <label className="field-title">Food Type</label>
-            <select value={foodType} onChange = {(e)=> {setFoodType(e.target.value)}}>
-              <option value= "vegetarian"> Vegetarian </option>
-              <option value= "glutenFree"> Gluten-free </option>
-              <option value= "dairyFree"> Dairy-free </option>
-              <option value= "nonPerishable"> Non-Perishable </option>
-              <option value= "meals"> Meals </option>
-            </select>
-            <label className="field-title">Number Of Servings</label>
-            <input type="number" min="0" value={numberOfServings} onChange={(event) => onInputUpdate(event, setNumberOfServings) } />
-            {/*<label className="field-title">Pick Up</label>
-            {/*<input type="radio" value="pickup" checked= {radio === "pickup"} onChange = {(e) => {setRadio(e.target.value)}} />
-            <label className="field-title">Deliver</label>
-            <input type="radio" value="deliver" checked= {radio === "deliver"} onChange = {(e) => {setRadio(e.target.value)}} />
-            {/* <label className="field-title">Deliver</label>
-            <input type="radio" value={deliver} checked= {radio === "deliver"} onChange={(event) => onInputUpdate(event, setDeliver) } /> */}
-            {/*<label className="field-title">Cooking Instructions</label>
-
-            <label className="field-title">Disclaimer</label>
-            
-            <label className="field-title">Agree</label>
-            
-            {/* <input type= "checkbox" value={agree} required onChange={handleChange}/> */}
-            {/* <div>{showResults ? <Results/> : null}</div> */}
-            <label className="field-title">Pick Time and Date</label>
-            <DateTimePicker
-            onChange={onChange}
-            value={value}
+    <div className="center">
+      <h1>Donation Form</h1>
+      <label>Food Type</label>
+      <select
+        value={foodType}
+        onChange={(e) => {
+          setFoodType(e.target.value);
+        }}
+      >
+        <option value="Vegetarian"> Vegetarian </option>
+        <option value="Gluten-Free"> Gluten-free </option>
+        <option value="Dairy-Free"> Dairy-free </option>
+        <option value="Non-Perishable"> Non-Perishable </option>
+      </select>{" "}
+      <label>Number Of Servings</label>
+      <input
+        type="number"
+        min="0"
+        max="4"
+        value={numberOfServings}
+        onChange={(event) => onInputUpdate(event, setNumberOfServings)}
       />
-        </div>
-        <button onClick={pickupSubmitFunction} >Submit</button>
-
-    </form>
+      <div className="delivery-option-container">
+        <p>Delivery Option</p>
+        <label>Pick Up</label>
+        <input
+          type="radio"
+          value="pickup"
+          checked={radio === "pickup"}
+          onChange={(e) => {
+            setRadio(e.target.value);
+          }}
+        />
+        <label>Deliver</label>
+        <input
+          type="radio"
+          value="deliver"
+          checked={radio === "deliver"}
+          onChange={(e) => {
+            setRadio(e.target.value);
+          }}
+        />
+      </div>
+      <label>Cooking Instructions</label>
+      <input
+        type="text"
+        value={cookingInstructions}
+        onChange={(event) => onInputUpdate(event, setCookingInstructions)}
+      />
+      <label>Disclaimer</label>
+      <input
+        type="text"
+        value={disclaimer}
+        onChange={(event) => onInputUpdate(event, setDisclaimer)}
+      />
+      <label>Ingredients</label>
+      <input
+        type="text"
+        value={ingredients}
+        onChange={(event) => onInputUpdate(event, setIngredients)}
+      />
+      <label>Date</label>
+      <input
+        type="date"
+        min="2019-01-01"
+        max="2022-12-31"
+        value={enteredDate}
+        onChange={dateChangeHandler}
+        required
+      />
+      <label htmlFor="agree">
+        {" "}
+        I agree to <b>terms and conditions</b>
+      </label>
+      <label>Agree</label>
+      <input type="checkbox" id="agree" onChange={checkboxHandler} />
+      <button disabled={!agree} className="btn" onClick={postData}>
+        Submit
+      </button>
+    </div>
   );
 }
 
-
-
-
-export default PickupForm
+export default PickupForm;

@@ -3,10 +3,14 @@ const mongoose = require("./mongooseDb");
 const DonationSchema = mongoose.model("DonationInventory", {
   foodType: String,
   numberOfServings: Number,
+  radio: String,
   cookingInstructions: String,
-  ingredients: [String],
   disclaimer: String,
-  termsAndConditions: Boolean,
+  ingredients: [String],
+  agree: Boolean,
+  ingredients: String,
+  agree: Boolean,
+  date: Date,
 });
 
 async function createDonation(donationData) {
@@ -17,7 +21,6 @@ async function createDonation(donationData) {
 
 async function listDonations() {
   return DonationSchema.find({});
-  console.log (listDonations)
 }
 
 async function findById(id) {
