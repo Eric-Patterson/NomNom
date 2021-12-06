@@ -105,7 +105,7 @@ function DonationForm(onSave) {
               setRadio(e.target.value);
             }}
           />
-          <label >Cooking Instructions</label>
+          <label>Cooking Instructions</label>
           <input
             type="text"
             value={cookingInstructions}
