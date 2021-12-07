@@ -11,67 +11,21 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   }
-/* .form-container {
-  height: 40em;
-  width: 40em;
-  top: auto;
-  bottom: auto;
-  justify-content: space-around;
-  padding-top: 20em;
-  background-color: lightblue;
-} */
-
-.close-btn {
-  position: absolute;
-  top: 2%;
-  right: 3%;
-  font-size: 1.5rem;
-  z-index: 1;
-  color: #fff;
-  cursor: pointer;
-}
-/* 
-.form-content-left {
-  background: linear-gradient(
-    90deg,
-    rgb(39, 176, 255) 0%,
-    rgb(0, 232, 236) 100%
-  );
-  border-radius: 10px 0 0 10px;
-  position: relative;
-} */
-
-/* .form-img {
-    width: 80%;
-    height: 80%;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-  } */
-
-
-/* .form-img-2 {
-
-    width: 60%;
-    height: 60%;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-  } */
 
 .form-success {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: top;
+  padding-top: 20px;
   text-align: center;
   font-size: 24px;
-  margin-top: 80px;
   color: #fff;
-}
-
-.form-content-right {
-  border-radius: 0 10px 10px 0;
-  position: relative;
-  background: linear-gradient(90deg, rgb(40, 40, 40) 0%, rgb(17, 17, 17) 100%);
 }
 
 .form {
