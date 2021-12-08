@@ -12,13 +12,11 @@ const Form = () => {
   }
   return (
     <>
-      <div className="form-container"></div>
+      <div className="form-container">
 
-      <span className="close-btn">x</span>
-
-      <div className="form-content-left"></div>
-      {/* this is the logic for sign up button to redirect to FormSuccess.js */}
-      {!isSubmitted ? <FormSignup submitForm={submitForm} /> : <FormSuccess />}
+        {/* this is the logic for sign up button to redirect to FormSuccess.js */}
+        {!isSubmitted ? <FormSignup submitForm={submitForm} /> : <FormSuccess />}
+      </div>
     </>
   );
 };

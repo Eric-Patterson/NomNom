@@ -10,7 +10,6 @@ const FormSignup = ({ submitForm }) => {
   );
 
   return (
-    <div className="form-content-right">
       <form className="form" onSubmit={handleSubmit}>
         <h1>
           Let's get started! Create account by filling out the information
@@ -92,7 +91,6 @@ const FormSignup = ({ submitForm }) => {
           Already have an account? Login <a href="#">here</a>
         </span>
       </form>
-    </div>
   );
 };
 
