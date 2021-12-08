@@ -7,6 +7,7 @@ import CreateDonationPage from "./components/pages/CreateDonationPage";
 import PickupFormPage from "./components/pages/PickupFormPage";
 import Navbar from "./components/Navbar/Navbar";
 import Form from "./components/signup/Form";
+import FormLogin from "./components/signup/FormLogin";
 import ErrorPage from "./components/pages/ErrorPage";
 
 import "./App.css";
@@ -35,7 +36,8 @@ function App() {
 
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/signIn" element={<Form />} />
+        <Route path="/register" element={<Form />} />
+        <Route path="/login" element={<FormLogin />} />
         <Route path="/donationform" element={<CreateDonationPage />} />
         <Route path="/pickupform" element={<PickupFormPage />} />
         <Route path="/details" element={<DonationDetailPage />} />
