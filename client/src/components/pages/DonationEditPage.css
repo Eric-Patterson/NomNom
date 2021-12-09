@@ -1,0 +1,23 @@
+.food-object-id {
+  padding: 1em;
+  margin: 1em;
+  background-color: rgba(255, 255, 255, 0.6);
+  box-shadow: 0px 0px 24px 4px rgba(0, 0, 0, 0.253);
+  border: 2px solid black;
+  display: flex;
+  flex-direction: column;
+  width: max-content;
+  height: max-content;
+  /* align-self: auto; */
+  line-height: 1.5em;
+}
+.food-object-id span {
+  font-weight: bold;
+}
+
+.donation-edit-container {
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  width: 80vh;
+}

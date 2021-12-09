@@ -41,11 +41,11 @@ class Navbar extends Component {
               Donation Form
             </Link>
           </li>
-          <li>
+          {/* <li>
             <Link to="/pickupform" className="nav-links">
               Pickup Form
             </Link>
-          </li>
+          </li> */}
           <li>
             <Link to="/signIn" className="nav-links">
               Sign In

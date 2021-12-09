@@ -1,19 +1,42 @@
+import "./Donations.css";
+
 function Donations(props) {
   const month = new Date(props.date).toLocaleString("en-US", { month: "long" });
   const day = new Date(props.date).toLocaleString("en-US", { day: "2-digit" });
   const year = new Date(props.date).toLocaleString("en-US", {
     year: "numeric",
   });
+  function capitalizeFirstLetter(string) {
+    return string.charAt(0).toUpperCase() + string.slice(1);
+  }
   return (
-    <div className="submited-container">
+    // on click selects id
+    <div className="food-object" onClick={() => props.donationSelected()}>
       {/* need to map over ingreddients*/}
-
-      <div>{props.food} Food</div>
-      <div>{props.servings} servings</div>
-      <div>{props.ingredients} ingredients</div>
-      <div>{props.disclaimer} disclaimer</div>
-      <div>{props.cookingInstructions} cookingInstructions</div>
-      <div>{`${props.radio} This day - ${month} ${day} ${year}`}</div>
+      <div>
+        <span>Food Type: </span>
+        {capitalizeFirstLetter(props.food)}
+      </div>
+      <div>
+        <span>Servings: </span>
+        {props.servings}
+      </div>
+      <div>
+        <span>Ingredients: </span>
+        {capitalizeFirstLetter(props.ingredients)}
+      </div>
+      <div>
+        <span>Disclaimer: </span>
+        {capitalizeFirstLetter(props.disclaimer)}
+      </div>
+      <div>
+        <span>Cooking Instructions: </span>
+        {props.cookingInstructions}
+      </div>
+      <div>
+        <span>Date Submitted: </span>
+        {`${month} ${day} ${year}`}
+      </div>
     </div>
   );
 }

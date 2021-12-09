@@ -1,0 +1,83 @@
+.donation-container {
+  color: white;
+  background: linear-gradient(90deg, rgb(40, 40, 40) 0%, rgb(17, 17, 17) 100%);
+  margin: 5em auto;
+  width: 50%;
+  box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 7px 20px 0 rgba(0, 0, 0, 0.2);
+  position: relative;
+  border-radius: 10px;
+  height: 35em;
+  display: flex;
+  justify-content: center;
+}
+
+.donation-container h1 {
+  /* border: 1px solid red; */
+  padding-bottom: 0.5em;
+  /* display: inline-block; */
+}
+
+.donation-container h1 {
+  text-align: center;
+}
+.donation-form {
+  width: 50%;
+  /* margin: auto; */
+  /* border: 1px solid red; */
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  margin: 1em;
+  line-height: 1.75em;
+}
+.radio input {
+  display: block;
+}
+.donation-form label {
+  display: inline-block;
+  padding-right: 1em;
+}
+.cooking-container input,
+.disclaimer-container input,
+.ingredients-container input {
+  padding-left: 0.2em;
+  display: block;
+  width: 100%;
+}
+.button-container-donation {
+  display: flex;
+  justify-content: center;
+  /* border: 1px solid red; */
+}
+.buttontrue {
+  cursor: pointer;
+  width: 25%;
+  height: 40px;
+  margin-top: 10px;
+  border-radius: 2px;
+  background: linear-gradient(
+    90deg,
+    rgb(39, 176, 255) 0%,
+    rgb(0, 232, 236) 100%
+  );
+  outline: none;
+  border: none;
+  color: #fff;
+  font-size: 1rem;
+}
+.buttonfalse {
+  /* cursor: pointer; */
+  width: 25%;
+  height: 40px;
+  margin-top: 10px;
+  border-radius: 2px;
+  background: linear-gradient(
+    90deg,
+    rgb(39, 176, 255) 0%,
+    rgb(0, 232, 236) 100%
+  );
+  outline: none;
+  border: none;
+  color: #fff;
+  font-size: 1rem;
+}

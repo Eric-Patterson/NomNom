@@ -1,13 +1,14 @@
-import { useParams } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
+import PickupForm from "../forms/PickupForm";
 
-import DonationDetail from "../DonationDetail";
 function PickupFormPage() {
-  let params = useParams();
-  return (
-    <div>
-      <DonationDetail donationId={params.id} />
-    </div>
-  );
+  const navigate = useNavigate();
+
+  function setSelectedDonationId(id) {
+    navigate("/donation/" + id);
+  }
+
+  return <PickupForm setSelectedDonationId={setSelectedDonationId} />;
 }
 
 export default PickupFormPage;
