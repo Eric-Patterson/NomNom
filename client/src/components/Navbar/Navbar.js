@@ -27,11 +27,6 @@ class Navbar extends Component {
         </div>
         <ul className={this.state.clicked ? "nav-menu active" : "nav-menu"}>
           <li>
-            <Link to="/" className="nav-links">
-              Home
-            </Link>
-          </li>
-          <li>
             <Link to="/about" className="nav-links">
               About
             </Link>
@@ -46,18 +41,17 @@ class Navbar extends Component {
               Donation Form
             </Link>
           </li>
-          {/* <li>
-            <Link to="/pickupform" className="nav-links">
-              Pickup Form
-            </Link>
-          </li> */}
           <li>
             <Link to="/register" className="nav-links">
               Sign In
             </Link>
           </li>
+          <li>
+            <Link to="/login" className="nav-links">
+              Login
+            </Link>
+          </li>
         </ul>
-        {/* <Button>Sign Up</Button> */}
       </nav>
     );
   }
