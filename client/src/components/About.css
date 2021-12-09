@@ -1,0 +1,26 @@
+.title {
+    font-family: 'Arial';
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+  }
+
+.whoWeAre {
+    height: 100px;
+    display: flex;
+    font-style: italic;
+    justify-content: center;
+    align-items: center;
+    font-size: 1rem;
+    font-family: 'Arial';
+    border-color: cadetblue;
+  }
+
+.centerImg {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 50%;
+      }
