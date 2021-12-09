@@ -10,7 +10,8 @@
     "build": "npm run build-client",
     "build-client": "cd client && npm run build && cd ..",
     "start": "npm run start-server",
-    "start-server": "cd server && npm start && cd .."
+    "start-server": "cd server && npm start && cd ..",
+    "start-all": "npm run build-client && npm run start-server && cd client && npm start && cd .."
   },
   "author": "",
   "license": "ISC",

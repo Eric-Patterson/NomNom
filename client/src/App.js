@@ -8,6 +8,9 @@ import CreateDonationPage from "./components/pages/CreateDonationPage";
 import Navbar from "./components/Navbar/Navbar";
 
 import Form from "./components/signup/Form";
+
+import FormLogin from "./components/signup/FormLogin";
+
 import DonationEditPage from "./components/pages/DonationEditPage";
 
 import ErrorPage from "./components/pages/ErrorPage";
@@ -21,8 +24,13 @@ function App() {
       <Navbar />
 
       <Routes>
+
+        <Route path="/register" element={<Form />} />
+        <Route path="/login" element={<FormLogin />} />
+
         <Route path="/" element={<HomePage />} />
         {/* <Route path="/signIn" element={<Form />} /> */}
+
         <Route path="/donationform" element={<CreateDonationPage />} />
         <Route path="/donation/:id" element={<DonationEditPage />} />
         {/* <Route path="/pickupform" element={<PickupFormPage />} />

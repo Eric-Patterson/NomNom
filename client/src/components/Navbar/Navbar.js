@@ -52,7 +52,7 @@ class Navbar extends Component {
             </Link>
           </li> */}
           <li>
-            <Link to="/signIn" className="nav-links">
+            <Link to="/register" className="nav-links">
               Sign In
             </Link>
           </li>

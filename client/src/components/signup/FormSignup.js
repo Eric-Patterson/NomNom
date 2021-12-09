@@ -1,7 +1,9 @@
 import React from "react";
 import useForm from "./useForm";
 import validate from "./ValidateInfo";
+
 import "./FormSignup.css";
+
 
 const FormSignup = ({ submitForm }) => {
   const { handleChange, values, handleSubmit, errors } = useForm(
@@ -10,6 +12,7 @@ const FormSignup = ({ submitForm }) => {
   );
 
   return (
+
     <form className="singup-form" onSubmit={handleSubmit}>
       <h1>
         Let's get started! Create account by filling out the information below.
