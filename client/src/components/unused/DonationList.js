@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 
 const DonationRow = ({
-  foodType,
+  foodtype,
   numberOfServings,
   cookingInstructions,
   disclaimer,
@@ -10,7 +10,7 @@ const DonationRow = ({
   onDonationSelected,
 }) => (
   <tr onClick={() => onDonationSelected()}>
-    <td>{foodType}</td>
+    <td>{foodtype}</td>
     <td>{numberOfServings}</td>
     <td>{cookingInstructions}</td>
     <td>{disclaimer}</td>
@@ -21,10 +21,8 @@ const DonationRow = ({
 
 const DonationList = ({ setSelectedDonationId }) => {
   const [donations, setDonations] = useState([]);
-
   useEffect(() => {
     async function fetchData() {
-      console.log("Fetching superhero data!");
       let fetchResult = await fetch("/api/donation");
       let donationList = await fetchResult.json();
       setDonations(donationList);
@@ -33,7 +31,7 @@ const DonationList = ({ setSelectedDonationId }) => {
   }, []);
 
   function selectDonation(id) {
-    console.log("selectSuperhero called on id", id);
+    // console.log('selectSuperhero called on id', id )
     setSelectedDonationId(id);
   }
 
@@ -57,7 +55,7 @@ const DonationList = ({ setSelectedDonationId }) => {
               <DonationRow
                 key={index}
                 onDonationSelected={() => selectDonation(donate._id)}
-                foodType={donate.foodType}
+                foodtype={donate.foodtype}
                 numberOfServings={donate.numberOfServings}
                 cookingInstructions={donate.cookingInstructions}
                 disclaimer={donate.disclaimer}

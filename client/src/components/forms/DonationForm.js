@@ -27,6 +27,9 @@ function DonationForm({ existingValues, onSave }) {
   }, [existingValues]);
 
   const checkboxHandler = () => {
+    // if(setAgree === false){
+
+    // }
     // if agree === true, it will be set to false
     // if agree === false, it will be set to true
     setAgree(!agree);
@@ -58,85 +61,121 @@ function DonationForm({ existingValues, onSave }) {
   }
 
   return (
-    <div className="center">
-      <h1>Donation Form</h1>
-      <label>Food Type</label>
-      <select
-        value={foodType}
-        onChange={(e) => {
-          setFoodType(e.target.value);
-        }}
-      >
-        <option value="Vegetarian"> Vegetarian </option>
-        <option value="Gluten-Free"> Gluten-free </option>
-        <option value="Dairy-Free"> Dairy-free </option>
-        <option value="Non-Perishable"> Non-Perishable </option>
-      </select>{" "}
-      <label>Number Of Servings</label>
-      <input
-        type="number"
-        min="0"
-        max="4"
-        value={numberOfServings}
-        onChange={(event) => onInputUpdate(event, setNumberOfServings)}
-      />
-      <div className="delivery-option-container">
-        <p>Delivery Option</p>
-        <label>Pick Up</label>
-        <input
-          type="radio"
-          value="pickup"
-          checked={radio === "pickup"}
-          onChange={(e) => {
-            setRadio(e.target.value);
-          }}
-        />
-        <label>Deliver</label>
-        <input
-          type="radio"
-          value="deliver"
-          checked={radio === "deliver"}
-          onChange={(e) => {
-            setRadio(e.target.value);
-          }}
-        />
+    <div className="donation-container">
+      <div className="donation-form">
+        <h1>Donation Form</h1>
+        <div className="donation-label-container food-container">
+          <label for="foodtype">Food Type</label>
+          <select
+            id="foodtype"
+            value={foodType}
+            onChange={(e) => {
+              setFoodType(e.target.value);
+            }}
+          >
+            <option value="Vegetarian"> Vegetarian </option>
+            <option value="Gluten-Free"> Gluten-free </option>
+            <option value="Dairy-Free"> Dairy-free </option>
+            <option value="Non-Perishable"> Non-Perishable </option>
+          </select>
+        </div>
+
+        <div className="donation-label-container serving-container">
+          <label for="servings">Number Of Servings</label>
+          <input
+            id="servings"
+            type="number"
+            min="0"
+            max="4"
+            value={numberOfServings}
+            onChange={(event) => onInputUpdate(event, setNumberOfServings)}
+          />
+        </div>
+
+        <div className="donation-label-container radio">
+          <p>Delivery Options</p>
+          <label for="pickup">Pick Up</label>
+          <input
+            id="pickup"
+            type="radio"
+            value="Pick Up"
+            checked={radio === "Pick Up"}
+            onChange={(e) => {
+              setRadio(e.target.value);
+            }}
+          />
+          <label for="delivery">Delivery</label>
+          <input
+            id="delivery"
+            type="radio"
+            value="Deliver"
+            checked={radio === "Deliver"}
+            onChange={(e) => {
+              setRadio(e.target.value);
+            }}
+          />
+        </div>
+
+        <div className="donation-label-container cooking-container">
+          <label for="cooking">Cooking Instructions</label>
+          <input
+            id="cooking"
+            type="text"
+            value={cookingInstructions}
+            onChange={(event) => onInputUpdate(event, setCookingInstructions)}
+          />
+        </div>
+
+        <div className="donation-label-container disclaimer-container">
+          <label for="disclaimer">Disclaimer</label>
+          <input
+            id="disclaimer"
+            type="text"
+            value={disclaimer}
+            onChange={(event) => onInputUpdate(event, setDisclaimer)}
+          />
+        </div>
+
+        <div className="donation-label-container ingredients-container">
+          <label for="ingredients">Ingredients</label>
+          <input
+            id="ingredients"
+            type="text"
+            value={ingredients}
+            onChange={(event) => onInputUpdate(event, setIngredients)}
+          />
+        </div>
+
+        <div className="donation-label-container date-container">
+          <label for="date">Date</label>
+          <input
+            id="date"
+            type="date"
+            min="2019-01-01"
+            max="2022-12-31"
+            value={enteredDate}
+            onChange={dateChangeHandler}
+            required
+          />
+        </div>
+
+        <div className="donation-label-container agree-container">
+          <label htmlFor="agree">
+            I agree to <b>terms and conditions</b>
+          </label>
+
+          <input type="checkbox" id="agree" onChange={checkboxHandler} />
+        </div>
+        <div className="button-container-donation">
+          <button
+            disabled={!agree}
+            className={agree ? "buttontrue" : "buttonfalse"}
+            onClick={postData}
+          >
+            Submit
+          </button>
+        </div>
       </div>
-      <label>Cooking Instructions</label>
-      <input
-        type="text"
-        value={cookingInstructions}
-        onChange={(event) => onInputUpdate(event, setCookingInstructions)}
-      />
-      <label>Disclaimer</label>
-      <input
-        type="text"
-        value={disclaimer}
-        onChange={(event) => onInputUpdate(event, setDisclaimer)}
-      />
-      <label>Ingredients</label>
-      <input
-        type="text"
-        value={ingredients}
-        onChange={(event) => onInputUpdate(event, setIngredients)}
-      />
-      <label>Date</label>
-      <input
-        type="date"
-        min="2019-01-01"
-        max="2022-12-31"
-        value={enteredDate}
-        onChange={dateChangeHandler}
-        required
-      />
-      <label htmlFor="agree">
-        {" "}
-        I agree to <b>terms and conditions</b>
-      </label>
-      <label>Agree</label>
-      <input type="checkbox" id="agree" onChange={checkboxHandler} />
-      <button disabled={!agree} className="btn" onClick={postData}>
-        Submit
-      </button>
     </div>
   );
 }
