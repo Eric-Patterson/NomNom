@@ -32,6 +32,11 @@ class Navbar extends Component {
             </Link>
           </li>
           <li>
+            <Link to="/about" className="nav-links">
+              About
+            </Link>
+          </li>
+          <li>
             <Link to="/details" className="nav-links">
               Details Page
             </Link>
@@ -41,11 +46,11 @@ class Navbar extends Component {
               Donation Form
             </Link>
           </li>
-          <li>
+          {/* <li>
             <Link to="/pickupform" className="nav-links">
               Pickup Form
             </Link>
-          </li>
+          </li> */}
           <li>
             <Link to="/register" className="nav-links">
               Sign In

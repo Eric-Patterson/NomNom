@@ -9,7 +9,6 @@ const DonationDetailPage = () => {
     <div>
       <DonationDetail donationId={params.id} />
       {/* <Link to="edit"> EDIT </Link> */}
-
     </div>
   );
 };
