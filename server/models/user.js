@@ -8,7 +8,18 @@ const UserSchema = new Schema({
     required: true,
     unique: true, // this is not considered a validation, it sets up an index
   },
-});
+  password: {
+    type: String,
+    required: true,
+  }
+},
+  { collection: 'user-data' }
+)
 
-UserSchema.plugin(passportLocalMongoose);
-module.exports = mongoose.model("User", UserSchema);
+const model = mongoose.model('UserData', UserSchema)
+
+module.exports = model
+
+// UserSchema.plugin(passportLocalMongoose);
+
+// module.exports = mongoose.model("User", UserSchema);
