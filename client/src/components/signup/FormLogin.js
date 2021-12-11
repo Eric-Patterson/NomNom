@@ -20,7 +20,6 @@ const FormLogin = ({ submitForm }) => {
             Email
           </label>
           <input
-            //for selecting email field on click in the browser
             id="email"
             type="email"
             name="email"

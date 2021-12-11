@@ -16,10 +16,10 @@ const UserSchema = new Schema({
   { collection: 'user-data' }
 )
 
-const model = mongoose.model('UserData', UserSchema)
+// const model = mongoose.model('UserData', UserSchema)
 
-module.exports = model
+// module.exports = model
 
-// UserSchema.plugin(passportLocalMongoose);
+UserSchema.plugin(passportLocalMongoose);
 
-// module.exports = mongoose.model("User", UserSchema);
+module.exports = mongoose.model("User", UserSchema);

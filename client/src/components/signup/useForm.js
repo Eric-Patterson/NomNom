@@ -20,6 +20,41 @@ const useForm = (callback, validate) => {
       [name]: value,
     });
   };
+// for register
+  async function registerUser(event) {
+    event.preventDefault()
+    console.log('Hi there !')
+    setErrors(validate(values))
+    const response = await fetch('http://localhost:5000/api/register', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        values
+      }),
+    })
+    const data = await response.json()
+    console.log(data)
+  }
+// for login
+  async function registerUser(event) {
+    event.preventDefault()
+    console.log('Hi there !')
+    setErrors(validate(values))
+    const response = await fetch('http://localhost:5000/api/login', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        values
+      }),
+    })
+    const data = await response.json()
+    console.log(data)
+  }
+
   // to prevent page from refreshing:
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -39,7 +74,7 @@ const useForm = (callback, validate) => {
     [errors]
   );
 
-  return { handleChange, values, handleSubmit, errors };
+  return { handleChange, values, handleSubmit, errors, registerUser };
 };
 //we exporting handleChange function to FormSignup.js
 export default useForm;
