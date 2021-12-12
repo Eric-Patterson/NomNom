@@ -5,11 +5,11 @@ import "../Home.css"
 
 const Home = () => {
   return (
-    <div className="title">
+      <div className="text">
 What we do: We are a virtual foodbank that removes the middle man and cuts labour 
 costs where warehouses storage and staff.
      
-      <div className="background">
+      <div className="main-background">
       <img src={process.env.PUBLIC_URL + "/people.png"} />
         {/* <img src={cat} alt="Logo" />; // <img src={cat} alt="Logo" />; */}
       </div>
