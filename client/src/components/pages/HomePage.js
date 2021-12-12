@@ -7,7 +7,7 @@ const Home = () => {
   return (
       <div className="text">
 What we do: We are a virtual foodbank that removes the middle man and cuts labour 
-costs where warehouses storage and staff.
+costs like warehouses storage and staff.
      
       <div className="main-background">
       <img src={process.env.PUBLIC_URL + "/people.png"} />

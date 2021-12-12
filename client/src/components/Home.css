@@ -1,10 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Fuzzy+Bubbles&family=Pacifico&display=swap');
 
+.text {
+    text-align: center;
+    background-image: linear-gradient(to bottom, rgba(255,255,0,0.5), rgba(0,0,255,0.5));
+    font-family:'Fuzzy Bubbles', cursive;
+    font-size: 2rem;
+
+
+
+    
+}
 
 .main-background {
+
     background-size: cover;
 }
 
-
-.text {
-
-}
