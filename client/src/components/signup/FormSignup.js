@@ -6,7 +6,7 @@ import "./FormSignup.css";
 
 
 const FormSignup = ({ submitForm }) => {
-  const { handleChange, values, handleSubmit, errors, registerUser } = useForm(
+  const { handleChange, values, errors, registerUser } = useForm(
     submitForm,
     validate
   )
