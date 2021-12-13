@@ -15,8 +15,7 @@ class Navbar extends Component {
       <nav className="NavbarItems">
         <h1 className="navbar-logo">
           <Link to="/" className="nav-links">
-            React
-            <i className="fab fa-react"></i>
+            NomNom
           </Link>
         </h1>
         <div className="menu-icon" onClick={this.handleClick}>

@@ -4,8 +4,9 @@ import "../About.css"
 
 function AboutPage() {
   return (
-    <p>
-        <h2 className="title"> Mission Statement: Are mission statement is to solve community hunger. </h2>
+    <div className="container">
+        <h2 className="title"> Our mission is to taret and solve community hunger through 
+        the contributions, involvement and care of our community. </h2>
         
         <div className="centerImg">
             <img src={process.env.PUBLIC_URL + "/donationbox.jpg"} />
@@ -15,10 +16,8 @@ function AboutPage() {
         <div className ="whoWeAre">
         Who we are: We are called "Java Chips" and we are awesome.
         Our team includes: Eric, Ali, Mahmuda, and Hannah.
-        
-        
         </div>
-    </p>
+    </div>
     
   );
 }
