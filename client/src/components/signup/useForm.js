@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import axios, { Axios } from 'axios'
 
 const useForm = (callback, validate) => {
   //values to set initial state value and setValues to update this state
@@ -23,7 +24,7 @@ const useForm = (callback, validate) => {
 // for register
   async function registerUser(event) {
     event.preventDefault()
-    console.log('Hi there !')
+    console.log('Hi there from register!')
     setErrors(validate(values))
     const response = await fetch('http://localhost:5000/api/register', {
       method: 'POST',
@@ -38,9 +39,9 @@ const useForm = (callback, validate) => {
     console.log(data)
   }
 // for login
-  async function registerUser(event) {
+  async function loginUser(event) {
     event.preventDefault()
-    console.log('Hi there !')
+    console.log('Hi there from login!')
     setErrors(validate(values))
     const response = await fetch('http://localhost:5000/api/login', {
       method: 'POST',
@@ -48,20 +49,13 @@ const useForm = (callback, validate) => {
         'Content-Type': 'application/json',
       },
       body: JSON.stringify({
-        values
+        username: values.username,
+        password: values.password
       }),
     })
-    const data = await response.json()
+    const data = await response.text()
     console.log(data)
   }
-
-  // to prevent page from refreshing:
-  const handleSubmit = (e) => {
-    e.preventDefault();
-
-    setErrors(validate(values));
-    setIsSubmitting(true);
-  };
 
   // to prevent submitting empty form:
   useEffect(
@@ -74,7 +68,7 @@ const useForm = (callback, validate) => {
     [errors]
   );
 
-  return { handleChange, values, handleSubmit, errors, registerUser };
+  return { handleChange, values, errors, registerUser, loginUser };
 };
 //we exporting handleChange function to FormSignup.js
 export default useForm;

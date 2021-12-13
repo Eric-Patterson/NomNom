@@ -1,38 +1,57 @@
 const express = require('express')
-const app = express()
-const User = require('./models/user')
-const cors = require("cors")
+const router = express.Router()
+const User = require('../models/user')
+const bcrypt = require("bcryptjs")
+const passport = require("passport");
+const LocalStrategy = require("passport-local");
+const session = require("express-session");
+const cookieParser = require("cookie-parser")
 
 
-app.use(express.json())
-app.use(cors())
+router.use(
+    session({
+        secret: "secret",
+        resave: true,
+        saveUninitialized: true,
+    })
+)
+router.use(cookieParser("secret"))
+router.use(passport.initialize())
+router.use(passport.session())
+require("../passportConfig")(passport)
 
-app.post('api/register', async (req, res) => {
+router.post('/register', async (req, res) => {
+    console.log(req)
     try {
+        const hashedPassword = await bcrypt.hash(req.body.values.password, 10)
         await User.create({
             username: req.body.values.username,
             email: req.body.values.email,
-            password: req.body.values.password
+            password: hashedPassword
         })
+        console.log("hashed pw", hashedPassword)
         res.json({ status: 'ok' })
     } catch (err) {
         res.json({ status: 'error', error: "Invalid email or password" })
     }
 })
 
-app.post('/api/login', async (req, res) => {
-    const user = await User.findOne({
-        email: req.body.values.email,
-        password: req.body.values.password,
-    })
-
-    if (user) {
-        return res.json({ status: 'ok', user: true })
-    } else {
-        return res.json({ status: 'error', user: false })
-    }
+router.post('/login', (req, res, next) => {
+    // console.log("LOGIN REQUEST", req)
+    // let user1 = req.body
+    passport.authenticate("local", (err, user, info) => {
+        console.log("USEEEEER", user, "INFO", info)
+        if (err) throw err;
+        if (!user) res.send("No user exists")
+        else {
+            req.logIn(user, err => {
+                if (err) throw err;
+                res.send('Successfully authenticated')
+                console.log('here is user', req.user)
+            })
+        }
+    })(req, res, next);
 })
 
-app.listen(5000, () => {
-    console.log('Server started on', 5000)
-})
+
+module.exports = router
