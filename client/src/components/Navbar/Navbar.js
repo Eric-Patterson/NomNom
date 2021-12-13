@@ -42,7 +42,7 @@ class Navbar extends Component {
           </li>
           <li>
             <Link to="/register" className="nav-links">
-              Sign In
+              Sign Up
             </Link>
           </li>
           <li>
