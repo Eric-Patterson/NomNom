@@ -6,14 +6,14 @@ import "./FormSignup.css";
 
 
 const FormSignup = ({ submitForm }) => {
-  const { handleChange, values, handleSubmit, errors } = useForm(
+  const { handleChange, values, handleSubmit, errors, registerUser } = useForm(
     submitForm,
     validate
-  );
+  )
 
   return (
 
-    <form className="singup-form" onSubmit={handleSubmit}>
+    <form className="singup-form" onSubmit={registerUser}>
       <h1>
         Let's get started! Create account by filling out the information below.
       </h1>
@@ -87,5 +87,6 @@ const FormSignup = ({ submitForm }) => {
     </form>
   );
 };
+
 
 export default FormSignup;
