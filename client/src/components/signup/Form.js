@@ -1,4 +1,3 @@
-
 import React, { useState } from "react";
 import FormSignup from "./FormSignup";
 import FormSuccess from "./FormSuccess";
@@ -13,9 +12,12 @@ const Form = () => {
   return (
     <>
       <div className="form-container">
-
         {/* this is the logic for sign up button to redirect to FormSuccess.js */}
-        {!isSubmitted ? <FormSignup submitForm={submitForm} /> : <FormSuccess />}
+        {!isSubmitted ? (
+          <FormSignup submitForm={submitForm} />
+        ) : (
+          <FormSuccess />
+        )}
       </div>
     </>
   );
