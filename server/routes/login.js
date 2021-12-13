@@ -20,7 +20,7 @@ router.use(passport.session());
 require("../passportConfig")(passport);
 
 router.post("/register", async (req, res) => {
-  console.log(req);
+  console.log("in reigster", req);
   try {
     const hashedPassword = await bcrypt.hash(req.body.values.password, 10);
     await User.create({
