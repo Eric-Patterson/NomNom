@@ -1,4 +1,6 @@
 export default function validateInfo(values) {
+  console.log("validating form");
+  console.log("values", values);
   let errors = {};
   //If username is not in place, there will be this error.
   if (!values.username) {
