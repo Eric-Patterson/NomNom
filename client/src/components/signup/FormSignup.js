@@ -5,13 +5,13 @@ import validate from "./ValidateInfo";
 import "./FormSignup.css";
 
 const FormSignup = ({ submitForm }) => {
-  const { handleChange, values, errors, registerUser } = useForm(
+  const { handleChange, values, errors, handleSubmit } = useForm(
     submitForm,
     validate
   );
 
   return (
-    <form className="singup-form" onSubmit={registerUser}>
+    <form className="singup-form" onSubmit={handleSubmit}>
       <h1>
         Let's get started! Create account by filling out the information below.
       </h1>

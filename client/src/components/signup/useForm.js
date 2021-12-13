@@ -9,7 +9,7 @@ const useForm = (callback, validate) => {
     password2: "",
   });
   const [errors, setErrors] = useState({});
-  const [isSubmitting, setIsSubmitting] = useState(false);
+  // const [isSubmitting, setIsSubmitting] = useState(false);
 
   const handleChange = (e) => {
     //to target events happening in any name fields from FormSignup.js file
@@ -24,6 +24,7 @@ const useForm = (callback, validate) => {
   async function registerUser(event) {
     event.preventDefault();
     console.log("Hi there from register!");
+
     setErrors(validate(values));
     const response = await fetch("http://localhost:5000/api/register", {
       method: "POST",
@@ -37,6 +38,7 @@ const useForm = (callback, validate) => {
     const data = await response.json();
     console.log(data);
   }
+
   // for login
   async function loginUser(event) {
     event.preventDefault();
@@ -58,21 +60,27 @@ const useForm = (callback, validate) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    let validateErrors = validate(values);
+    if (Object.keys(validateErrors).length > 0) {
+      return setErrors(validateErrors);
+    }
+    registerUser(e).then(callback);
 
-    setErrors(validate(values));
-    setIsSubmitting(true);
+    console.log("handleSubmit something");
+    // setIsSubmitting(true);
   };
 
   // to prevent submitting empty form:
-  useEffect(
-    () => {
-      if (Object.keys(errors).length === 0 && isSubmitting) {
-        callback();
-      }
-    },
-    //only triggers when it updates errors
-    [errors]
-  );
+  // useEffect(
+  //   () => {
+  //     console.log("somehting work", Object.keys(errors));
+  //     if (Object.keys(errors).length === 0) {
+  //       callback();
+  //     }
+  //   },
+  //   //only triggers when it updates errors
+  //   [errors]
+  // );
 
   return {
     handleChange,
