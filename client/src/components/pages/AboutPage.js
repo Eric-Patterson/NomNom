@@ -4,10 +4,10 @@ function AboutPage() {
   return (
     <div className="container">
       <h2 className="title">
-        {" "}
         Our mission is to taret and solve community hunger through the
         contributions, involvement and care of our community.{" "}
       </h2>
+
 
       <div className="centerImg">
         {/* <img src={process.env.PUBLIC_URL + "/donationbox.jpg"} /> */}
