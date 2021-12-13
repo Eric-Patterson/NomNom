@@ -7,6 +7,7 @@ const DonationDetailPage = () => {
 
   return (
     <div>
+      {console.log(params.id)}
       <DonationDetail donationId={params.id} />
       {/* <Link to="edit"> EDIT </Link> */}
     </div>

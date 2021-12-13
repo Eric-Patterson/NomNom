@@ -4,15 +4,13 @@ import validate from "./ValidateInfo";
 
 import "./FormSignup.css";
 
-
 const FormSignup = ({ submitForm }) => {
   const { handleChange, values, errors, registerUser } = useForm(
     submitForm,
     validate
-  )
+  );
 
   return (
-
     <form className="singup-form" onSubmit={registerUser}>
       <h1>
         Let's get started! Create account by filling out the information below.
@@ -82,11 +80,11 @@ const FormSignup = ({ submitForm }) => {
         Sign up
       </button>
       <span className="form-input-login">
-        Already have an account? Login <a href="#">here</a>
+        {/* Already have an account? Login <a href="#">here</a> */}
+        Already have an account? Login
       </span>
     </form>
   );
 };
-
 
 export default FormSignup;

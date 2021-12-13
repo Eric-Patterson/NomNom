@@ -11,8 +11,9 @@ const Form = () => {
   }
   return (
     <>
+      {/* this is the logic for sign up button to redirect to FormSuccess.js */}
       <div className="form-container">
-        {/* this is the logic for sign up button to redirect to FormSuccess.js */}
+        {console.log(isSubmitted)}
         {!isSubmitted ? (
           <FormSignup submitForm={submitForm} />
         ) : (
