@@ -6,7 +6,7 @@ import "../Home.css"
 const Home = () => {
   return (
       <div className="text">
-What we do: We are a virtual foodbank that removes the middle man and cuts labour 
+What is NomNom? We are a virtual foodbank that removes the middle man and cuts labour 
 costs like warehouses storage and staff.
      
       <div className="main-background">

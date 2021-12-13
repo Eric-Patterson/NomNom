@@ -5,7 +5,8 @@ import "../About.css"
 function AboutPage() {
   return (
     <p>
-        <h2 className="title"> Mission Statement: Are mission statement is to solve community hunger. </h2>
+        <h2 className="title"> Our mission is to solve community hunger through 
+        the contributions, involvement and care of our community. </h2>
         
         <div className="centerImg">
             <img src={process.env.PUBLIC_URL + "/donationbox.jpg"} />

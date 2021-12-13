@@ -3,14 +3,9 @@ import React from "react";
 import "./About.css"
 
 const About = () => {
-    return (
-    <div>
-        
-        WORK damn it!!
-       
-    </div>
+    return ( "WORK DAMN IT!")
 
-    );
+    
   };
   
   export default About;

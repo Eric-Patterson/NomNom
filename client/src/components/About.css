@@ -1,21 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Fuzzy+Bubbles&family=Pacifico&display=swap');
+
 .title {
-    font-family: 'Arial';
-    height: 80px;
-    display: flex;
+    font-family:'Fuzzy Bubbles', cursive;
     justify-content: center;
     align-items: center;
     font-size: 2rem;
   }
 
 .whoWeAre {
-    height: 100px;
-    display: flex;
+    height: 60px;
+    display: inline-flex;
     font-style: italic;
     justify-content: center;
     align-items: center;
     font-size: 1rem;
-    font-family: 'Arial';
-    border-color: cadetblue;
+    font-family: 'Fuzzy Bubbles', cursive;
+    border: 3px solid;
+    border-radius: 5px;
+    border-color: rgb(44, 210, 216);
   }
 
 .centerImg {
@@ -23,4 +25,5 @@
         margin-left: auto;
         margin-right: auto;
         width: 50%;
+        background-size: cover;
       }
