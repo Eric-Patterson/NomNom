@@ -1,4 +1,7 @@
 .NavbarItems {
+  position:-webkit-sticky;
+  position:sticky;
+  top:0;
   background: linear-gradient(
     90deg,
     rgb(110, 94, 254) 0%,

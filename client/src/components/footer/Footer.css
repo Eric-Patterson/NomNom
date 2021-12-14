@@ -138,3 +138,17 @@
     }
   }
    */
+
+   .footerArea {
+     display:block;
+
+     position: fixed;
+     bottom: 0;
+     width: 100%;
+     height: 7rem;
+     background-color: #BC8F8F;
+     /* opacity: 0.9; */
+     /* border-top-right-radius: 10rem; */
+   }
+
+   /*change footer position!!!*/

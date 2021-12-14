@@ -1,7 +1,8 @@
-// import React, { Component } from "react";
+import React from "react";
 // import { Link } from "react-router-dom";
 // import { Button } from "../Button";
-// import "./Navbar.css";
+import "./Footer.css";
+
 
 // class Navbar extends Component {
 //   state = { clicked: false };
@@ -56,4 +57,16 @@
 //   }
 // }
 
-// export default Navbar;
+
+function Footer (){
+
+return(
+<div className="footerArea">
+    <p>JAVA CHIPS ARE AWESOME!!</p>
+
+</div>
+);
+}
+
+
+export default Footer;
