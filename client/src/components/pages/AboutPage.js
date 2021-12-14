@@ -10,7 +10,7 @@ function AboutPage() {
 
 
       <div className="centerImg">
-        {/* <img src={process.env.PUBLIC_URL + "/donationbox.jpg"} /> */}
+        <img src={process.env.PUBLIC_URL + "/donationbox.jpg"} />
       </div>
 
       <div className="whoWeAre">

@@ -1,8 +1,5 @@
 .centerImg {
-    background-size: cover;
-    background-position: center;
-    display: flex;
-    flex-wrap: nowrap;
-    justify-content: flex-end;
-    height: 500px;
+  display: flex;
+  justify-content: flex-start;
+  height: 700px;
   }
