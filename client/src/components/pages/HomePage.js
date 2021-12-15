@@ -11,7 +11,7 @@ const Home = () => {
         costs like warehouse storage and staffing.
       </div>
       <div className="main-background">
-        {/* <img src={process.env.PUBLIC_URL + "/people.png"} /> */}
+        <img src={process.env.PUBLIC_URL + "/people.png"} />
         {/* <img src={cat} alt="Logo" />; // <img src={cat} alt="Logo" />; */}
       </div>
     </div>

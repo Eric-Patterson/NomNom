@@ -5,6 +5,7 @@ import HomePage from "./components/pages/HomePage";
 import AboutPage from "./components/pages/AboutPage";
 import CreateDonationPage from "./components/pages/CreateDonationPage";
 import Navbar from "./components/Navbar/Navbar";
+import Footer from "./components/footer/Footer";
 import Form from "./components/signup/Form";
 import FormLogin from "./components/signup/FormLogin";
 import DonationEditPage from "./components/pages/DonationEditPage";
@@ -27,6 +28,7 @@ function App() {
         <Route path="/reset" element={<Reset />} />
         <Route path="*" element={<ErrorPage />} />
       </Routes>
+      <Footer />
     </div>
   );
 }
