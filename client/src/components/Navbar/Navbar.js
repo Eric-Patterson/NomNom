@@ -36,11 +36,6 @@ function Navbar() {
           </Link>
         </li>
         <li>
-          <Link to="/logout" className="nav-links">
-            Logout
-          </Link>
-        </li>
-        <li>
           <Link to="/register" className="nav-links">
             Sign Up
           </Link>
