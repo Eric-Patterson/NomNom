@@ -62,6 +62,11 @@ function Footer (){
 
 return(
 <div className="footerArea">
+
+{/* <div className="centerImg">
+        <img src={process.env.PUBLIC_URL + "/foodbags.png"} />
+      </div> */}
+
     <p>JAVA CHIPS ARE AWESOME!!</p>
 
 </div>
