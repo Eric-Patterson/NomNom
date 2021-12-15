@@ -2,9 +2,11 @@
 // import DonationDetail from "../DonationDetail";
 import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
+import { useNavigate } from "react-router";
 
 import "./DonationEditPage.css";
 const DonationEditPage = (props) => {
+  const navigate = useNavigate();
   let params = useParams();
   let donationId = params.id;
 
@@ -19,6 +21,13 @@ const DonationEditPage = (props) => {
     };
     fetchDonation();
   }, [donationId]);
+
+  async function deleteDonation(id) {
+    await fetch("/api/donation/" + donationId, {
+      method: "DELETE",
+    });
+    navigate("/details");
+  }
 
   return (
     <div className="donation-edit-container">
@@ -54,6 +63,7 @@ const DonationEditPage = (props) => {
           {donate?.radio.charAt(0).toUpperCase() + donate?.radio.slice(1)}
         </div>
       </div>
+      <button onClick={() => deleteDonation()}>Delete</button>
     </div>
   );
 };
