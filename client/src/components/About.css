@@ -2,6 +2,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&display=swap');
 
 
+/* .container{
+    display:flex;
+     flex-direction: column;
+     justify-content:start;
+     flex-wrap: wrap;
+} */
+
 .title {
   display: grid;
   text-align: center;
@@ -38,22 +45,22 @@
     border-radius: 3rem 0rem;
     width: 10rem;
     height: 28rem;
-
-    
-    
   }
 
 .centerImg {
-        background:  center/cover;
-        width: cover ;
-        height: cover;
-        margin: 0 auto;
-        box-shadow: 10px 10px 5px 1px cadetblue;
-        
-      }
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    width: 80% ;
+    margin: 0 auto;
+    box-shadow: 10px 10px 5px 1px cadetblue;
+    /* border: red solid 1px; */
+    /* object-fit: cover; */
+  }
 
 .bodyText1{
-    display: flexbox;
+    display: flex;
+    flex-direction: column;
     margin: 1rem;
     padding: 1rem;
     font-size: 1rem;

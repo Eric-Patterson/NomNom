@@ -63,11 +63,18 @@ function Footer (){
 return(
 <div className="footerArea">
 
-{/* <div className="centerImg">
-        <img src={process.env.PUBLIC_URL + "/foodbags.png"} />
-      </div> */}
+  <div className="footerImg">
+        <img src={process.env.PUBLIC_URL + "/truckfood.png"} />
+  </div>
 
-    <p>JAVA CHIPS ARE AWESOME!!</p>
+      {/* <div className="footerElements">
+        <p>JAVA CHIPS ARE AWESOME!!</p>
+          <p>1</p>
+            <p>2</p>
+            <p>3</p>
+            <p>4</p>
+          <p>5</p>
+      </div> */}
 
 </div>
 );
