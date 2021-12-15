@@ -9,6 +9,7 @@ import Form from "./components/signup/Form";
 import FormLogin from "./components/signup/FormLogin";
 import DonationEditPage from "./components/pages/DonationEditPage";
 import ErrorPage from "./components/pages/ErrorPage";
+import Reset from "./components/pages/ResetPage";
 import "./App.css";
 
 function App() {
@@ -23,6 +24,7 @@ function App() {
         <Route path="/donation/:id" element={<DonationEditPage />} />
         <Route path="/details" element={<DonationDetailPage />} />
         <Route path="/about" element={<AboutPage />} />
+        <Route path="/reset" element={<Reset />} />
         <Route path="*" element={<ErrorPage />} />
       </Routes>
     </div>

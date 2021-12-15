@@ -9,16 +9,23 @@ router.get("/donation", async (req, res) => {
   res.send(donationList);
 });
 
+router.post("/donationForm", async (req, res) => {
+  let newDonation = req.body;
+  let createdId = await donationModel.createDonation(newDonation);
+  res.send(createdId);
+});
+
 router.get("/donation/:id", async (req, res) => {
   let id = req.params.id;
   let donation = await donationModel.findById(id);
   res.send(donation);
 });
 
-router.post("/donationForm", async (req, res) => {
-  let newDonation = req.body;
-  let createdId = await donationModel.createDonation(newDonation);
-  res.send(createdId);
+router.delete("/donation/:id", async (req, res) => {
+  let id = req.params.id;
+  console.log("deleting donation", id);
+  let deletedDonation = await donationModel.deleteDonation(id);
+  res.send(deletedDonation);
 });
 
 module.exports = router;
