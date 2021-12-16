@@ -19,11 +19,6 @@
     cursor: pointer;
   }
   
-  .fa-react {
-    margin-left: 0.5rem;
-    font-size: 1.6rem;
-  }
-  
   .nav-menu {
     display: grid;
     grid-template-columns: repeat(5, auto);
@@ -33,12 +28,6 @@
     width: 70vw;
     justify-content: end;
     margin-right: 2rem;
-  }
-  
-  .nav-links {
-    color: white;
-    text-decoration: none;
-    padding: 0.5rem 1rem;
   }
   
   .nav-links:hover {
@@ -108,12 +97,7 @@
       transform: translate(-100%, 60%);
       font-size: 1.8rem;
       cursor: pointer;
-    }
   
-    .fa-times {
-      color: #fff;
-      font-size: 2rem;
-    }
   
     .nav-links-mobile {
       display: block;
@@ -142,6 +126,7 @@
 
    .footerAreaLarge {
      position: fixed;
+     display: flexbox;
      bottom: 0;
      width: 100%;
      height: 7rem;
@@ -161,7 +146,7 @@
     background-color:#566355; 
     position: relative;
     margin: 0 auto;
-  
+    align-content: center;
     border-radius: 0.4em;
     display: flex;
     justify-content: center;
@@ -185,7 +170,19 @@
      /* transform: translate((120px, 50%)); */
     align-self: center;
     margin-bottom: 9em; 
-    animation-name: animate__lightSpeedInRight;
-    animation-duration: 3s;
-  }
+
+    animation-name: animate__fadeInRightBig;
+    animation-duration: 4s;
+}
+
+    @keyframes animate__fadeInRightBig{
+    -100% {
+    transform: translate(0);
+    }
+    0% {
+    transform: translate(400%);
+   }
+    }
+
+
 

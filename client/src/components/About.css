@@ -30,7 +30,7 @@
   font-style: italic;
   justify-content: center;
   align-items: center;
-  font-size: 1rem;
+  font-size: 1.5rem;
   color: white;
   font-family: 'Roboto Condensed', sans-serif;
   background-color: rgb(23, 101, 104);
@@ -46,10 +46,11 @@
 } */
 
 .whoWeAre:hover {
-    background-color: rgb(9, 64, 66) ;
+    background-color: rgb(33, 128, 131) ;
     border-radius: 3rem 0rem;
-    width: 10rem;
-    height: 28rem;
+    width: 15rem;
+    height: 20rem;
+    transform: translate(-5%, -40%);
   }
 
 .centerImg {
