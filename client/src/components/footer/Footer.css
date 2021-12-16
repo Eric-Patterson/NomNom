@@ -1,3 +1,4 @@
+
 /* .NavbarItems {
     background: linear-gradient(
       90deg,
@@ -18,11 +19,6 @@
     cursor: pointer;
   }
   
-  .fa-react {
-    margin-left: 0.5rem;
-    font-size: 1.6rem;
-  }
-  
   .nav-menu {
     display: grid;
     grid-template-columns: repeat(5, auto);
@@ -32,12 +28,6 @@
     width: 70vw;
     justify-content: end;
     margin-right: 2rem;
-  }
-  
-  .nav-links {
-    color: white;
-    text-decoration: none;
-    padding: 0.5rem 1rem;
   }
   
   .nav-links:hover {
@@ -107,12 +97,7 @@
       transform: translate(-100%, 60%);
       font-size: 1.8rem;
       cursor: pointer;
-    }
   
-    .fa-times {
-      color: #fff;
-      font-size: 2rem;
-    }
   
     .nav-links-mobile {
       display: block;
@@ -139,33 +124,61 @@
   }
    */
 
-   .footerArea {
+   .footerAreaLarge {
      position: fixed;
+     display: flexbox;
      bottom: 0;
      width: 100%;
-     height: 7rem;
-
-     /* background-color: #BC8F8F; */
+     height: 6rem;
+     box-shadow: 1px 3px 12px 2px #534950;
+     background-color: #534950;
+     /* background-color: #FFC2B9; */
      /* opacity: 0.9; */
      /* border-top-right-radius: 10rem; */
    }
 
    /*change footer position!!!*/
 
+   .footerAreaSmall {
+    display: flex;
+    position: absolute;
+    width: 90%;
+    height: 5rem;
+    box-shadow: 1px 3px 12px 2px #534950;
+    background-color:#534950; 
+    border-radius: 0.4em;
+    margin: 0 auto;
+    align-content: center;
+    justify-content: center;
+    right: 0;     left: 0;     top: 0;     bottom: 0;
+  }
+
    .footerElements{
     display:flex;
      flex-direction: row;
      justify-content: space-evenly;
      align-content: center;
+     color: whitesmoke;
    }
 
    .footerImg{
     display: flex;
     flex-direction: row;
-     width: 15em;
-     height: 6em;
-    /* flex-wrap: wrap-reverse; */
-     /* justify-content:flex-end; */
-     /* transform: translate((120px, 50%)); */
-    align-self: flex-end;
-  }
+    width: 15em;
+    height: 8em;
+    align-self: center;
+    margin-bottom: 9em; 
+    animation-name: animate__fadeInRightBig;
+    animation-duration: 4s;
+}
+    @keyframes animate__fadeInRightBig{
+    100% {
+    transform: translate(0);
+    }
+    0% {
+    transform: translate(400%);
+   }
+    }
+
+
+

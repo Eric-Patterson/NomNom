@@ -58,7 +58,7 @@ function Navbar() {
   return (
     <nav className="NavbarItems">
       <h1 className="navbar-logo">
-        <Link to="/" className="nav-links">
+        <Link to="/" className="nav-links" id="nomnom">
           NomNom
         </Link>
       </h1>
@@ -80,11 +80,13 @@ function Navbar() {
           </Link>
         </li>
         <li>
+
           <Link to="/donationform" className="nav-links">
             Donation Form
           </Link>
         </li>
         <li>
+
           <Link to="/register" className="nav-links">
             Sign Up
           </Link>
