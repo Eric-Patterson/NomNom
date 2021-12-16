@@ -6,7 +6,7 @@ function AboutPage() {
         
         <h2 className="title">
           Our mission is to target and solve community hunger through the
-          contributions, involvement and care of our community.{" "}
+          contributions, involvement and care of our community.
         </h2>
 
             <div className="bodyText1">
@@ -19,7 +19,7 @@ function AboutPage() {
             <div className="bodyText2">
             How does it work?
             Any registered donor can donate both perishable and non-perishable 
-            food items to our virtual foodbank that is within their neighbourhood P
+            food items to our virtual foodbank that is within their located
             community. No physical transaction happens until the selected food items 
             from the virtual inventory has been confirmed. After the transaction has
             been confirmed, third party volunteers will follow the chosen date and 

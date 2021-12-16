@@ -55,10 +55,11 @@
 
 .centerImg {
     display: flex;
-    flex-direction: column;
     justify-content:center;
-    width: 40%;
+    width: 60%;
+
     margin: 0 auto;
+    padding: 0 auto;
     box-shadow: 10px 10px 5px 1px cadetblue; 
     border: red solid 1px;
     /* object-fit: cover; */
