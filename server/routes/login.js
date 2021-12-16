@@ -19,6 +19,14 @@ router.use(passport.initialize());
 router.use(passport.session());
 require("../passportConfig")(passport);
 
+// router.get("/reset", (req, res) => {
+//   // res.send("session destroyed", session);
+//   res.json({ status: "session destroyed" });
+//   req.session.destroy(function (err) {
+//     // cannot access session here
+//   });
+// });
+
 router.post("/register", async (req, res) => {
   console.log("in reigster", req);
   try {

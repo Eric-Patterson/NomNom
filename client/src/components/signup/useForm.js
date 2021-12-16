@@ -1,6 +1,10 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
+// import { useNavigate } from "react-router-dom";
 
 const useForm = (callback, validate) => {
+  // let navigate = useNavigate();
+  // navigate("/details");
+
   //values to set initial state value and setValues to update this state
   const [values, setValues] = useState({
     username: "",
@@ -54,6 +58,7 @@ const useForm = (callback, validate) => {
         password: values.password,
       }),
     });
+
     const data = await response.text();
     console.log(data);
   }
@@ -64,23 +69,12 @@ const useForm = (callback, validate) => {
     if (Object.keys(validateErrors).length > 0) {
       return setErrors(validateErrors);
     }
+
     registerUser(e).then(callback);
 
     console.log("handleSubmit something");
     // setIsSubmitting(true);
   };
-
-  // to prevent submitting empty form:
-  // useEffect(
-  //   () => {
-  //     console.log("somehting work", Object.keys(errors));
-  //     if (Object.keys(errors).length === 0) {
-  //       callback();
-  //     }
-  //   },
-  //   //only triggers when it updates errors
-  //   [errors]
-  // );
 
   return {
     handleChange,

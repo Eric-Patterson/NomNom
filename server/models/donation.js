@@ -27,7 +27,12 @@ async function findById(id) {
   return DonationSchema.findById(id);
 }
 
+async function deleteDonation(id) {
+  return DonationSchema.findByIdAndDelete(id);
+}
+
 module.exports = {
+  deleteDonation,
   createDonation,
   listDonations,
   findById,
