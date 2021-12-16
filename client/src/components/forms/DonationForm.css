@@ -3,12 +3,13 @@
   background: linear-gradient(90deg, rgb(40, 40, 40) 0%, rgb(17, 17, 17) 100%);
   margin: 5em auto;
   width: 50%;
-  box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 7px 20px 0 rgba(0, 0, 0, 0.2);
+  /* box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 7px 20px 0 rgba(0, 0, 0, 0.2); */
   position: relative;
   border-radius: 10px;
   height: 35em;
   display: flex;
   justify-content: center;
+  box-shadow: 3px 5px 12px 4px #af83a0;
 }
 
 .donation-container h1 {

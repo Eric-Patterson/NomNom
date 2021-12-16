@@ -34,6 +34,10 @@ function AboutPage() {
           <img src={process.env.PUBLIC_URL + "/donationbox.jpg"} />
         </div>
 
+        {/* <div className="ohHi">
+          Oh Hi!
+        </div> */}
+
         <div className="whoWeAre">
           Who we are: We are called "Java Chips" and we are awesome. Our team
           includes: Eric, Ali, Mahmuda, and Hannah.

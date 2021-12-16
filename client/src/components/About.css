@@ -4,9 +4,10 @@
 
 /* .container{
     display:flex;
-     flex-direction: column;
+     flex-direction: row;
      justify-content:start;
      flex-wrap: wrap;
+     overflow: scroll;
 } */
 
 .title {
@@ -40,6 +41,10 @@
   border-radius: 50%;
 }
 
+/* @keyframes ohHi {
+
+} */
+
 .whoWeAre:hover {
     background-color: rgb(9, 64, 66) ;
     border-radius: 3rem 0rem;
@@ -51,16 +56,15 @@
     display: flex;
     flex-direction: column;
     justify-content:center;
-    width: 80% ;
+    width: 40%;
     margin: 0 auto;
-    box-shadow: 10px 10px 5px 1px cadetblue;
-    /* border: red solid 1px; */
+    box-shadow: 10px 10px 5px 1px cadetblue; 
+    border: red solid 1px;
     /* object-fit: cover; */
   }
 
 .bodyText1{
     display: flex;
-    flex-direction: column;
     margin: 1rem;
     padding: 1rem;
     font-size: 1rem;
@@ -68,15 +72,14 @@
     color: black;
     font-family: 'Fuzzy Bubbles';
     background-color: rgb(182, 215, 218);
-    /* border: 1px solid;
-    border-color: rgb(23, 101, 104); */
+    width: 50%;
     border-radius: 2rem;
    
 }
 
 
 .bodyText2{
-  display: flexbox;
+  display: flex;
   margin: 1rem;
   padding: 1rem;
   /* justify-content: center;
@@ -85,6 +88,6 @@
   color: black;
   font-family: 'Fuzzy Bubbles';
   background-color: rgb(182, 215, 218);
-  /* border: 1px solid;
-  border-color: rgb(23, 101, 104); */
+  width: 50%;
+  border-bottom-right-radius: 2rem;
 }
