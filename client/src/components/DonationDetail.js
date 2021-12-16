@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { useNavigate } from "react-router";
 import Donations from "./Donations";
 import "./DonationDetail.css";
+// import validateInfo from "./signup/ValidateInfo";
 
 const DonationDetail = () => {
   const [donate, setDonate] = useState();
@@ -36,7 +37,6 @@ const DonationDetail = () => {
   //   // console.log('selectSuperhero called on id', id )
   //   setSelectedDonationId(id);
   // }
-
   return (
     <main>
       <div className="donate-container">

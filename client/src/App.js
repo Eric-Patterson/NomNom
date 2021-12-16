@@ -1,3 +1,4 @@
+// import React, { useState } from "react";
 import React from "react";
 import { Routes, Route } from "react-router-dom";
 import DonationDetailPage from "./components/pages/DonationDetailPage";
@@ -14,6 +15,7 @@ import Reset from "./components/pages/ResetPage";
 import "./App.css";
 
 function App() {
+  // const [isLoggedIn, setLoggedIn] = useState(false);
   return (
     <div className="App">
       <Navbar />
