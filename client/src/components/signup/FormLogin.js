@@ -13,9 +13,11 @@ const FormLogin = ({ submitForm }) => {
 
   return (
     <form className="form" onSubmit={loginUser}>
-      <h1>Please use your credentials to Log In</h1>
+      <h1>Log In</h1>
+      
       {/* This is a field for email */}
-      <div className="form-inputs">
+      <div className="forHome">
+        <div className="form-inputs">
         <label htmlFor="usernmae" className="form-label">
           Username
         </label>
@@ -56,6 +58,7 @@ const FormLogin = ({ submitForm }) => {
         {/* {console.log(status)} */}
         Log In
       </button>
+      </div>
     </form>
   );
 };

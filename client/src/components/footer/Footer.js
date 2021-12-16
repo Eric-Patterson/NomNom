@@ -61,11 +61,13 @@ import "./Footer.css";
 function Footer (){
 
 return(
-<div className="footerArea">
+<div className="footerAreaLarge">
 
-  <div className="footerImg">
+  <div className="footerAreaSmall">
+
+    <div className="footerImg">
         <img src={process.env.PUBLIC_URL + "/truckfood.png"} />
-  </div>
+     </div>
 
       {/* <div className="footerElements">
         <p>JAVA CHIPS ARE AWESOME!!</p>
@@ -76,6 +78,7 @@ return(
           <p>5</p>
       </div> */}
 
+  </div>
 </div>
 );
 }
