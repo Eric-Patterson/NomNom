@@ -17,7 +17,7 @@ function AboutPage() {
             </div>
             
             <div className="bodyText2">
-            How does it work?
+            <h3>How does it work?</h3>
             Any registered donor can donate both perishable and non-perishable 
             food items to our virtual foodbank that is within their located
             community. No physical transaction happens until the selected food items 

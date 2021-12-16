@@ -2,20 +2,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&display=swap');
 
 
-/* .container{
-    display:flex;
-     flex-direction: row;
-     justify-content:start;
-     flex-wrap: wrap;
-     overflow: scroll;
-} */
-
 .title {
   display: grid;
   text-align: center;
   font-family:'Fuzzy Bubbles', cursive;
-  font-size: 2rem;
+  font-size: 2.2rem;
   padding: 3rem;
+  width: 100%;
+  grid-area: hd;
   }
 
 .whoWeAre {
@@ -54,42 +48,56 @@
   }
 
 .centerImg {
-    display: flex;
+    display: grid;
     justify-content:center;
-    width: 60%;
-
+    align-content: center;
+    width: cover;
     margin: 0 auto;
     padding: 0 auto;
     box-shadow: 10px 10px 5px 1px cadetblue; 
-    border: red solid 1px;
-    /* object-fit: cover; */
+    grid-area: mn;
   }
 
 .bodyText1{
-    display: flex;
-    margin: 1rem;
-    padding: 1rem;
-    font-size: 1rem;
+    display: grid;
     text-align: center;
-    color: black;
+    font-size: 1.2rem;
+    margin:  3rem;
+    padding: 1.6rem;
+    align-content: center;
+    color: white;
     font-family: 'Fuzzy Bubbles';
-    background-color: rgb(182, 215, 218);
-    width: 50%;
+    background-color: #6d8073;
     border-radius: 2rem;
-   
+    width: 90%;
+    grid-area: t1;
 }
 
 
 .bodyText2{
-  display: flex;
-  margin: 1rem;
+  display: grid;
+  height: fit-content;
+  margin: 5rem;
   padding: 1rem;
-  /* justify-content: center;
-  align-items: center; */
+  align-content: center;
   font-size: 1rem;
-  color: black;
+  color: white;
   font-family: 'Fuzzy Bubbles';
-  background-color: rgb(182, 215, 218);
-  width: 50%;
+  background-color: #6d8073;
   border-bottom-right-radius: 2rem;
+  grid-area: sd;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(9, 1fr);
+  /* grid-auto-rows: minmax(300px); */
+  grid-template-areas:
+    "hd hd hd hd hd hd hd hd hd"
+    "t1 t1 t1 t1 t1 t1 t1 t1 t1"
+    "sd sd sd mn mn mn mn mn mn"
+    
+
+
+
 }
