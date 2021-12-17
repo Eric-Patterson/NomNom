@@ -21,3 +21,25 @@
   margin: auto;
   width: 80vh;
 }
+.delete-container {
+  display: flex;
+  justify-content: center;
+}
+.deleteButton {
+  margin: 0.5em;
+  padding: 0.5em 1em;
+  display: inline-block;
+  font-size: 1.2rem;
+  border: none;
+  color: white;
+  background-color: #f6a01b;
+  text-decoration: none;
+  cursor: pointer;
+  /* margin-bottom: 0.5em; */
+  /* padding: 0.5em; */
+}
+.deleteButton:hover {
+  background-color: #14213d;
+  border-radius: 4px;
+  transition: all 0.2s ease-out;
+}

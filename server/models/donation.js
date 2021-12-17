@@ -1,4 +1,4 @@
-const mongoose = require("./mongooseDb");
+const mongoose = require("mongoose");
 
 const DonationSchema = mongoose.model("DonationInventory", {
   foodType: String,
