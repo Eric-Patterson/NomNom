@@ -4,10 +4,13 @@ import "./index.css";
 import { BrowserRouter } from "react-router-dom";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
+import Auth0ProviderWithHistory from "./auth/auth0-history";
 
 ReactDOM.render(
   <BrowserRouter>
-    <App />
+    <Auth0ProviderWithHistory>
+      <App />
+    </Auth0ProviderWithHistory>
   </BrowserRouter>,
   document.getElementById("root")
 );

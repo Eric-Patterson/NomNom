@@ -12,9 +12,9 @@ const Home = () => {
         costs like warehouse storage and staffing.
       </div>
 
-      <div>
+      {/* <div>
         <FormLogin />
-      </div>
+      </div> */}
 
       <div className="main-background">
         <img src={process.env.PUBLIC_URL + "/people.png"} />
