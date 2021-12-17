@@ -1,32 +1,34 @@
-@import url('https://fonts.googleapis.com/css2?family=Fuzzy+Bubbles&family=Pacifico&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Fuzzy+Bubbles&family=Pacifico&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&display=swap");
 
-
+body {
+  min-height: max-content;
+}
 .title {
   display: grid;
   text-align: center;
-  font-family:'Fuzzy Bubbles', cursive;
+  font-family: "Fuzzy Bubbles", cursive;
   font-size: 2.2rem;
   padding: 3rem;
   width: 100%;
   grid-area: hd;
-  }
+}
 
 .whoWeAre {
   position: fixed;
   bottom: 0;
   right: 0;
-  width: 10rem;
+  width: 12rem;
   height: 10rem;
   margin: 5rem 0rem 0rem 5rem;
   padding: 2rem;
-  display:inline-block;
+  display: inline-block;
   font-style: italic;
   justify-content: center;
   align-items: center;
   font-size: 1.5rem;
   color: white;
-  font-family: 'Roboto Condensed', sans-serif;
+  font-family: "Roboto Condensed", sans-serif;
   background-color: rgb(23, 101, 104);
   border: 3px solid;
   border-color: rgb(23, 101, 104);
@@ -40,41 +42,39 @@
 } */
 
 .whoWeAre:hover {
-    background-color: rgb(33, 128, 131) ;
-    border-radius: 3rem 0rem;
-    width: 15rem;
-    height: 20rem;
-    transform: translate(-5%, -40%);
-  }
-
+  background-color: rgb(33, 128, 131);
+  border-radius: 3rem 0rem;
+  width: 15rem;
+  height: 20rem;
+  transform: translate(-5%, -40%);
+}
 .centerImg {
-    display: grid;
-    justify-content:center;
-    align-content: center;
-    width: cover;
-    margin: 0 auto;
-    padding: 0 auto;
-    box-shadow: 10px 10px 5px 1px cadetblue; 
-    grid-area: mn;
-  }
-
-.bodyText1{
-    display: grid;
-    text-align: center;
-    font-size: 1.2rem;
-    margin:  3rem;
-    padding: 1.6rem;
-    align-content: center;
-    color: white;
-    font-family: 'Fuzzy Bubbles';
-    background-color: #6d8073;
-    border-radius: 2rem;
-    width: 90%;
-    grid-area: t1;
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  width: cover;
+  margin: 0 auto;
+  padding: 0 auto;
+  box-shadow: 10px 10px 5px 1px cadetblue;
+  grid-area: mn;
 }
 
+.bodyText1 {
+  display: grid;
+  text-align: center;
+  font-size: 1.2rem;
+  margin: 3rem;
+  padding: 1.6rem;
+  align-content: center;
+  color: white;
+  font-family: "Fuzzy Bubbles";
+  background-color: #6d8073;
+  border-radius: 2rem;
+  width: 90%;
+  grid-area: t1;
+}
 
-.bodyText2{
+.bodyText2 {
   display: grid;
   height: fit-content;
   margin: 5rem;
@@ -82,22 +82,19 @@
   align-content: center;
   font-size: 1rem;
   color: white;
-  font-family: 'Fuzzy Bubbles';
+  font-family: "Fuzzy Bubbles";
   background-color: #6d8073;
   border-bottom-right-radius: 2rem;
   grid-area: sd;
 }
 
-.container {
+.about-container {
+  padding-bottom: 10em;
   display: grid;
   grid-template-columns: repeat(9, 1fr);
   /* grid-auto-rows: minmax(300px); */
   grid-template-areas:
     "hd hd hd hd hd hd hd hd hd"
     "t1 t1 t1 t1 t1 t1 t1 t1 t1"
-    "sd sd sd mn mn mn mn mn mn"
-    
-
-
-
+    "sd sd sd mn mn mn mn mn mn";
 }
