@@ -2,58 +2,18 @@ import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 // import { Button } from "../Button";
 import "./Navbar.css";
-// import useForm from "../signup/useForm";
+import AuthNav from "../auth-nav";
 
-// import useForm from "../signup/useForm";
+import { useAuth0 } from "@auth0/auth0-react";
 
 function Navbar() {
-  // let { status } = useForm();
-  // status = newStatus;
+  const { isAuthenticated } = useAuth0();
 
-  // function userLoggedIn = loginUser({})
-
-  // console.log("i am in navbar", status);
-
-  // const [loggedIn, setLoggedIn] = useState(false);
   const [clicked, setClicked] = useState(false);
 
   function handleClick() {
     setClicked({ clicked: !clicked });
   }
-
-  // function loggedin() {
-  //   if (status === false) {
-  //     return (
-  //       <div>
-  // <li>
-  //   <Link to="/register" className="nav-links">
-  //     Sign Up
-  //   </Link>
-  // </li>
-  // <li>
-  //   <Link to="/login" className="nav-links">
-  //     Login
-  //   </Link>
-  // </li>
-  //       </div>
-  //     );
-  //   } else {
-  //     return (
-  //       <div className="true">
-  //         <li>
-  //           <Link to="/details" className="nav-links">
-  //             Details Page
-  //           </Link>
-  //         </li>
-  //         <li>
-  //           <Link to="/logout" className="nav-links">
-  //             Logout
-  //           </Link>
-  //         </li>
-  //       </div>
-  //     );
-  //   }
-  // }
 
   return (
     <nav className="NavbarItems">
@@ -72,21 +32,23 @@ function Navbar() {
             About
           </Link>
         </li>
+        {isAuthenticated ? (
+          <li>
+            <Link to="/details" className="nav-links">
+              Details Page
+            </Link>
+          </li>
+        ) : (
+          <div></div>
+        )}
 
-        {/* {loggedin()} */}
         <li>
-          <Link to="/details" className="nav-links">
-            Details Page
-          </Link>
-        </li>
-        <li>
-
           <Link to="/donationform" className="nav-links">
             Donation Form
           </Link>
         </li>
-        <li>
 
+        {/* <li>
           <Link to="/register" className="nav-links">
             Sign Up
           </Link>
@@ -95,8 +57,9 @@ function Navbar() {
           <Link to="/login" className="nav-links">
             Login
           </Link>
-        </li>
+        </li> */}
       </ul>
+      <AuthNav />
     </nav>
   );
 }
