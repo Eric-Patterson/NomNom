@@ -6,14 +6,30 @@ function Donations(props) {
   const year = new Date(props.date).toLocaleString("en-US", {
     year: "numeric",
   });
-  function capitalizeFirstLetter(string) {
-    return string.charAt(0).toUpperCase() + string.slice(1);
-  }
+  // function capitalizeFirstLetter(string) {
+  //   return string.charAt(0).toUpperCase() + string.slice(1);
+  // }
   return (
     // on click selects id
     <div className="food-object" onClick={() => props.donationSelected()}>
       {/* need to map over ingreddients*/}
       <div>
+        <span>Food Type: </span>
+        {props.food}
+      </div>
+      <div>
+        <span>Servings: </span>
+        {props.servings}
+      </div>
+      <div>
+        <span>Ingredients: </span>
+        {props.ingredients}
+      </div>
+      <div>
+        <span>Disclaimer: </span>
+        {props.disclaimer}
+      </div>
+      {/* <div>
         <span>Food Type: </span>
         {capitalizeFirstLetter(props.food)}
       </div>
@@ -28,7 +44,7 @@ function Donations(props) {
       <div>
         <span>Disclaimer: </span>
         {capitalizeFirstLetter(props.disclaimer)}
-      </div>
+      </div> */}
       <div>
         <span>Cooking Instructions: </span>
         {props.cookingInstructions}
