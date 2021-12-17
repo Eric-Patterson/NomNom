@@ -16,8 +16,7 @@ const mongoose = require("mongoose");
 
 // const dbUrl = process.env.DB_URL;
 const dbUrl =
-  process.env.DB_URL ||
-  "mongodb+srv://eric:ccz3SV6Epex3PhX@cluster0.upfl7.mongodb.net/c7DonationInventory?retryWrites=true&w=majority";
+  process.env.DB_URL || "mongodb://localhost:27017/c7DonationInventory";
 mongoose.connect(dbUrl, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
@@ -31,8 +30,10 @@ mongoose.connect(dbUrl, {
 
 const donationRoutes = require("./routes/donationRoutes");
 
-app.use(express.json());
 app.use("/api", donationRoutes);
+app.use("/", express.static("../client/build"));
+app.use(express.json());
+
 app.use("*", (req, res) => {
   res.sendFile(path.join(__dirname, "../client/build", "index.html"));
 });
