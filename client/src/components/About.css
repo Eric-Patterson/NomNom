@@ -54,7 +54,7 @@
     width: cover;
     margin: 0 auto;
     padding: 0 auto;
-    box-shadow: 10px 10px 5px 1px cadetblue; 
+    box-shadow: 10px 10px 7px 1px cadetblue; 
     grid-area: mn;
   }
 
@@ -62,14 +62,15 @@
     display: grid;
     text-align: center;
     font-size: 1.2rem;
-    margin:  3rem;
+    margin: 3rem;
     padding: 1.6rem;
     align-content: center;
     color: white;
     font-family: 'Fuzzy Bubbles';
     background-color: #6d8073;
+    box-shadow: 5px 5px 10px 1px cadetblue; 
     border-radius: 2rem;
-    width: 90%;
+    width: 75%;
     grid-area: t1;
 }
 
