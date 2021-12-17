@@ -35,7 +35,7 @@ function Navbar() {
         {isAuthenticated ? (
           <li>
             <Link to="/details" className="nav-links">
-              Details Page
+              Inventory
             </Link>
           </li>
         ) : (

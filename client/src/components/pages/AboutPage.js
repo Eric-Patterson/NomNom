@@ -3,7 +3,7 @@ import "../About.css";
 function AboutPage() {
   return (
     <div className="about-container">
-      <h2 className="title">
+      <h2 className="title-text">
         Our mission is to target and solve community hunger through the
         contributions, involvement and care of our community.
       </h2>
@@ -16,7 +16,7 @@ function AboutPage() {
       </div>
 
       <div className="bodyText2">
-        <h3>How does it work?</h3>
+        <h2>How does it work?</h2>
         Any registered donor can donate both perishable and non-perishable food
         items to our virtual foodbank that is within their located community. No
         physical transaction happens until the selected food items from the
@@ -31,20 +31,13 @@ function AboutPage() {
       </div>
 
       <div className="centerImg">
-        <img
-          className="centerImgImg"
-          src={process.env.PUBLIC_URL + "/donationbox.jpg"}
-          alt="image of something"
-        />
+        <img src={process.env.PUBLIC_URL + "/donationbox.jpg"}/>
       </div>
 
-      {/* <div className="ohHi">
-          Oh Hi!
-        </div> */}
-
       <div className="whoWeAre">
-        Who we are: We are called "Java Chips" and we are awesome. Our team
-        includes: Eric, Ali, Mahmuda, and Hannah.
+        Who we are:<br /> 
+        We are called "Java Chips" and we are awesome. <br /> 
+        Our team includes: Eric, Ali, Mahmuda, and Hannah.
       </div>
     </div>
   );

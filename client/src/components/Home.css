@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Fuzzy+Bubbles&family=Pacifico&display=swap');
 
-.container   {
+.container-home   {
     display: flex;
     flex-wrap: wrap;
     align-content: flex-start;
@@ -8,21 +8,26 @@
 }
 
 .text {
-    display: grid;
-    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    /* text-align: center; */
     font-family:'Fuzzy Bubbles', cursive;
     font-size: 2rem;
-    padding: 3rem;    
+    padding: 3rem;
+    width: 40%; 
 }
 
 .main-background {
     display: flex;
     position: absolute;
-    opacity: 0.5;
+    opacity: 0.48;
     bottom:0;
     right: 0;
 
 } 
 
-h2 { padding-bottom: 15px;}
+h2 { 
+    font-family: "Courier New Bold", Courier, monospace;
+    padding: 2rem;
+}
 

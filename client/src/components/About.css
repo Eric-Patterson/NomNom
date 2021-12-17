@@ -4,7 +4,7 @@
 body {
   min-height: max-content;
 }
-.title {
+.title-text {
   display: grid;
   text-align: center;
   font-family: "Fuzzy Bubbles", cursive;
@@ -36,11 +36,6 @@ body {
   transition-timing-function: cubic-bezier(0.22, 1, 0.36, 1);
   border-radius: 50%;
 }
-
-/* @keyframes ohHi {
-
-} */
-
 .whoWeAre:hover {
   background-color: rgb(33, 128, 131);
   border-radius: 3rem 0rem;
