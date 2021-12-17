@@ -29,22 +29,6 @@ function Donations(props) {
         <span>Disclaimer: </span>
         {props.disclaimer}
       </div>
-      {/* <div>
-        <span>Food Type: </span>
-        {capitalizeFirstLetter(props.food)}
-      </div>
-      <div>
-        <span>Servings: </span>
-        {props.servings}
-      </div>
-      <div>
-        <span>Ingredients: </span>
-        {capitalizeFirstLetter(props.ingredients)}
-      </div>
-      <div>
-        <span>Disclaimer: </span>
-        {capitalizeFirstLetter(props.disclaimer)}
-      </div> */}
       <div>
         <span>Cooking Instructions: </span>
         {props.cookingInstructions}
