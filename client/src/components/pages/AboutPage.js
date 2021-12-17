@@ -11,12 +11,12 @@ function AboutPage() {
       <div className="bodyText1">
         We believe that nobody should go to bed hungry. That's why we created an
         app that allows neighbours and businesses who want to help their
-        community give freely and conveniently without the costly physical
-        requirements of a food storage warehouse or human labour costs.
+        community give freely and conveniently without the extra costly
+        requirements of a food storage warehouse or warehouse worker cost.
       </div>
 
       <div className="bodyText2">
-        <h2>How does it work?</h2>
+        <h2 className="t2title"> How does it work?</h2>
         Any registered donor can donate both perishable and non-perishable food
         items to our virtual foodbank that is within their located community. No
         physical transaction happens until the selected food items from the
@@ -35,9 +35,10 @@ function AboutPage() {
       </div>
 
       <div className="whoWeAre">
-        Who we are:<br /> 
-        We are called "Java Chips" and we are awesome. <br /> 
+        Who are we:<br /> 
+        We are called "Java Chips". <br /> 
         Our team includes: Eric, Ali, Mahmuda, and Hannah.
+        <br /> We are awesome.
       </div>
     </div>
   );
