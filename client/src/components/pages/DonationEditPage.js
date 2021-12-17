@@ -43,8 +43,7 @@ const DonationEditPage = (props) => {
         </div>
         <div>
           <span>Disclaimer: </span>
-          {donate?.disclaimer.charAt(0).toUpperCase() +
-            donate?.disclaimer.slice(1)}
+          {donate?.disclaimer}
         </div>
         <div>
           <span>Ingredients: </span>
@@ -52,18 +51,19 @@ const DonationEditPage = (props) => {
         </div>
         <div>
           <span>Cooking Instructions: </span>
-          {donate?.cookingInstructions.charAt(0).toUpperCase() +
-            donate?.cookingInstructions.slice(1)}
+          {donate?.cookingInstructions}
         </div>
         <div>
           <span>Date Submitted: </span>
           {donate?.date}
         </div>
-        <div>
-          {donate?.radio.charAt(0).toUpperCase() + donate?.radio.slice(1)}
+        <div>{donate?.radio}</div>
+        <div className="delete-container">
+          <button className="deleteButton" onClick={() => deleteDonation()}>
+            Checkout
+          </button>
         </div>
       </div>
-      <button onClick={() => deleteDonation()}>Delete</button>
     </div>
   );
 };
